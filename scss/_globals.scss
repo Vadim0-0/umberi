@@ -1,0 +1,86 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: var(--font-family);
+
+  &.white {
+    background-color: #F2FCFF;
+  }
+
+  &.seryy {
+    background-color: var(--seryy);
+  }
+
+}
+
+img {
+  max-width: 100%;
+  pointer-events: none;
+  object-fit: cover;
+}
+
+a {
+  font-family: var(--second-family);
+  color: var(--black);
+  @include transitionEaseInOut;
+}
+
+button {
+  font-family: var(--second-family);
+  font-family: var(--font-family)
+}
+
+.section-title {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 112%;
+  letter-spacing: 0em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.btn-global {
+  @include flex-center;
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #584100;
+  @include transitionEaseInOut;
+}
+
+@media (max-width: 768px) {
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .btn-global {
+    font-size: 12px;
+  }
+}
