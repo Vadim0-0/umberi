@@ -1,0 +1,32 @@
+.footer {
+  padding: 67px 0 25px 0;
+  margin-top: -7px;
+  border-top: 4px solid #c4e1eb;
+  border-left: 4px solid #c4e1eb;
+  border-right: 4px solid #c4e1eb;
+  border-radius: 10px 10px 0 0;
+  background-color: #fdd000;
+
+  &-link {
+    margin-bottom: 19px;
+  }
+
+  &-email {
+    margin-bottom: 19px;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #000;
+  }
+
+  & p {
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #000;
+  }
+}
