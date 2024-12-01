@@ -1,0 +1,158 @@
+.header {
+
+  &__content {
+    max-width: 960px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-bottom: 4px solid #c4e1eb;
+    border-left: 4px solid #c4e1eb;
+    border-right: 4px solid #c4e1eb;
+    border-radius: 0 0 10px 10px;
+    background-color: #fdd000;
+
+    &-logo {
+      width: 80px;
+      height: 60px;
+      background-image: url(../img/header/logo.svg);
+
+      &:hover {
+        background-image: url(../img/header/logo-hover.svg);
+      }
+
+      &:active {
+        background-image: url(../img/header/logo-active.svg);
+      }
+    }
+
+    &-nav {
+      margin-left: 48px;
+
+      &__list {
+        gap: 3px;
+
+        & a {
+          padding: 16px 30px;
+          border-radius: 10px;
+          border: 1px solid #fdd000;
+
+          &:hover {
+            color: var(--white);
+            border: 1px solid #fff5c4;
+            background-color: #3d2c00;
+          }
+
+          &:active {
+            color: #3d2c00;
+            border: 1px solid #fff5c4;
+            background-color: #ffe361;
+          }
+        }
+      }
+    }
+
+    &-link {
+      margin-left: auto;
+
+      & a {
+        padding: 17px 19px;
+        border-radius: 10px;
+        border: 1px solid #fdd000;
+
+        & svg {
+          fill: #584100;
+          @include transitionEaseInOut;
+        }
+
+        &:hover {
+          color: var(--white);
+          border: 1px solid #fff5c4;
+          background-color: #3d2c00;
+
+          & svg {
+            fill: var(--white);
+          }
+        }
+
+        &:active {
+          color: #3d2c00;
+          border: 1px solid #fff5c4;
+          background-color: #ffe361;
+
+          & svg {
+            fill: #3d2c00;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media (max-width: 992px) {
+
+  .header {
+
+    &__content {
+      padding-bottom: 65px;
+
+      &-nav {
+        position: absolute;
+        left: 50%;
+        bottom: 5px;
+        transform: translateX(-50%);
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .header {
+    padding-bottom: 45px;
+
+    &__content {
+
+      &-nav {
+
+        &__list {
+          overflow-x: auto;
+
+          &-item {
+
+            & a {
+              padding: 5px;
+              border: none;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .header {
+
+    &__content {
+
+      &-nav {
+        width: 100%;
+        bottom: 20px;
+
+        &__list {
+          overflow-x: auto;
+
+          &-item {
+
+            & a {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
