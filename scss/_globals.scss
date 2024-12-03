@@ -24,15 +24,7 @@ body {
   flex-direction: column;
   height: 100%;
   font-family: var(--font-family);
-
-  &.white {
-    background-color: #F2FCFF;
-  }
-
-  &.seryy {
-    background-color: var(--seryy);
-  }
-
+  background-color: #F2FCFF;
 }
 
 img {
@@ -48,7 +40,6 @@ a {
 }
 
 button {
-  font-family: var(--second-family);
   font-family: var(--font-family)
 }
 
