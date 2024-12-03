@@ -1,3 +1,28 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const headerContent = document.querySelector('.header__content');
+  const burgerButton = document.getElementById('header-burger-open');
+
+  if (headerContent && burgerButton) {
+      const toggleActiveClass = () => {
+          if (window.innerWidth < 768) {
+              headerContent.classList.toggle('active');
+              burgerButton.classList.toggle('active');
+          }
+      };
+
+      burgerButton.addEventListener('click', toggleActiveClass);
+
+      // Обновляем состояние при изменении размера экрана
+      window.addEventListener('resize', () => {
+          if (window.innerWidth >= 768) {
+              headerContent.classList.remove('active');
+              burgerButton.classList.remove('active');
+          }
+      });
+  }
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
   // Найти все блоки с классом "trainingIndicators-exercise__content-block"
   const contentBlocks = document.querySelectorAll(".trainingIndicators-exercise__content-block");
