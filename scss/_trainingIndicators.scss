@@ -1,0 +1,1090 @@
+/* Показатели тренировок */
+
+.trainingIndicators-hero {
+  padding-top: 61px;
+  padding-bottom: 35px;
+
+  &__content {
+
+    &-blocks {
+
+      &__block {
+
+        &-content {
+          padding-bottom: 24px;
+          border-radius: 10px;
+          min-height: 290px;
+
+          &__top {
+            padding: 17px 11px;
+            align-items: center;
+            gap: 13px;
+
+            & h3 {
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 137%;
+              letter-spacing: 0.01em;
+            }
+
+            & p {
+              font-weight: 300;
+              font-size: 14px;
+              line-height: 121%;
+              letter-spacing: 0.01em;
+            }
+          }
+
+          &__info {
+            @include flex-center;
+            min-width: 128px;
+            max-width: 100%;
+            min-height: 80px;
+            border-radius: 10px;
+
+            & p {
+              font-weight: 300;
+              font-size: 48px;
+              line-height: 100%;
+              letter-spacing: 0em;
+              text-align: center;
+
+              & span {
+                font-size: 20px;
+              }
+            }
+          }
+
+          &__bottom {
+            width: 100%;
+            height: 34px;
+
+            &-line {
+              padding: 5px 13px;
+              width: 100%;
+              height: 100%;
+              border-radius: 0 10px 10px 0;
+
+              & p {
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 183%;
+                letter-spacing: 0.01em;
+                color: #005e79;
+              }
+            }
+          }
+        }
+
+        &:nth-child(1) {
+          padding-right: 0;
+
+          & .trainingIndicators-hero__content-blocks__block-content {
+            border: 1px solid #cbe2f1;
+            background-color: #c9f1fd;
+
+            & h3 {
+              color: #005e79;
+            }
+
+            & p {
+              color: #005e79;
+            }
+
+            &__info {
+              border: 1px solid #a6ccd7;
+              background-color: #d9f6fe;
+            }
+
+            &__top {
+              padding: 17px 11px 4px 11px;
+              gap: 15px;
+            }
+
+            &__bottom {
+              border-top: 1px solid #cbe2f1;
+              border-bottom: 1px solid #cbe2f1;
+              background-color: #e5f8ff;
+
+              &-line {
+                width: 69%;
+                background-color: #a9e0f0;
+              }
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          padding-left: 10px;
+          padding-right: 5px;
+
+          & .trainingIndicators-hero__content-blocks__block-content {
+            background-color: #d3e3fc;
+
+            & h3 {
+              color: #003f79;
+            }
+
+            & p {
+              color: #003f79;
+            }
+
+            &__info {
+              border: 1px solid #b4cadb;
+              background-color: #ecf2fe;
+
+              & p {
+                font-size: 36px;
+              }
+            }
+
+            &__top {
+              padding: 24px 15px 4px 24px;
+              gap: 23px;
+            }
+
+            &__bottom {
+              border: 1px solid  #c9d9e8;
+              background-color: #ecf2fe;
+
+              &-line {
+                width: 45%;
+                background-color: #b8d1f8;
+              }
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          padding-left: 7px;
+          padding-right: 6px;
+
+          & .trainingIndicators-hero__content-blocks__block-content {
+            background-color: #dacafb;
+
+            & h3 {
+              color: #644594;
+            }
+
+            & p {
+              color: #644594;
+            }
+
+            &__info {
+              border: 1px solid #c9bae3;
+              background-color: #efe7fc;
+
+              & p {
+                font-size: 36px;
+              }
+            }
+
+            &__top {
+              padding: 22px 15px 4px 20px;
+              gap: 23px;
+            }
+
+            &__bottom {
+              border: 1px solid #cdbfe6;
+              background-color: #efe7fc;
+
+              &-line {
+                width: 45%;
+                background-color: #c8b3f3;
+              }
+            }
+          }
+        }
+
+        &:nth-child(4) {
+          padding-left: 5px;
+
+          & .trainingIndicators-hero__content-blocks__block-content {
+            background-color: #f1c9fb;
+
+            & h3 {
+              color: #863a8d;
+            }
+
+            & p {
+              color: #863a8d;
+            }
+
+            &__info {
+              border: 1px solid #dbbee8;
+              background-color: #f9e7fd;
+
+              & p{
+                font-size: 36px;
+              }
+
+            }
+
+            &__top {
+              padding: 26px 15px 4px 18px;
+              gap: 15px;
+            }
+
+            &__bottom {
+              border: 1px solid #dbbee8;
+              background-color: #f9e7fd;
+
+              &-line {
+                width: 45%;
+                background-color: #dbabe7;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.trainingIndicators-exercise {
+  padding-bottom: 100px;
+
+  &__content {
+
+    &-block {
+      overflow: hidden;
+      @include transitionEase;
+
+      &__top {
+        gap: 13px;
+        padding-bottom: 10px;
+
+        &-info {
+          width: 378px;
+          height: 86px;
+          border-radius: 10px;
+          background-color: #883d8f;
+          @include transitionEase;
+
+          &__left {
+            position: relative;
+            @include flex-center;
+            width: 119px;
+            border-radius: 10px;
+            background-color: #fce2ff;
+            background-image: url(../img/trainingIndicators/exercise/exercise-img1.svg);
+            background-repeat: no-repeat;
+            background-position: left center;
+            z-index: 1;
+            @include transitionEase;
+
+            & p {
+              font-weight: 600;
+              font-size: 24px;
+              line-height: 62%;
+              letter-spacing: 0em;
+              text-align: center;
+              color: #863a8d;
+
+              & span {
+                font-size: 12px;
+              }
+            }
+          }
+
+          &__right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 25px;
+            padding-top: 8px;
+
+            & h3 {
+              font-weight: 900;
+              font-size: 14px;
+              line-height: 157%;
+              letter-spacing: 0.01em;
+              text-align: center;
+              color: #fff;
+            }
+
+            & .subject {
+              position: absolute;
+              top: 0;
+              left: 113px;
+              padding: 5px 13px 5px 24px;
+              border-radius: 0 5px 5px 0;
+              background-color: #f1c9fb;
+              z-index: 0;
+
+              & p {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 100%;
+                letter-spacing: 0.01em;
+                color: #883d8f;
+              }
+            }
+          }
+        }
+
+        &-cards {
+          @include grid-ColumnsEqually(6, 5px);
+
+          &__card {
+            @include flex-betweenCenter;
+            flex-direction: column;
+            padding: 8px 0;
+            border-radius: 10px;
+            border: 1px solid #cbe2f1;
+            background-color: #fff;
+
+            & span {
+              align-self: end;
+              margin-right: 12px;
+              font-weight: 100;
+              font-size: 15px;
+              line-height: 100%;
+              letter-spacing: 0.01em;
+              text-align: center;
+              color: #058921;
+            }
+
+            & h4 {
+              font-weight: 300;
+              font-size: 24px;
+              line-height: 100%;
+              letter-spacing: 0em;
+              text-align: center;
+              color: #616161;
+            }
+
+            & p {
+              font-weight: 300;
+              font-size: 12px;
+              line-height: 100%;
+              letter-spacing: 0.01em;
+              text-align: center;
+              color: #646f81;
+            }
+
+            &-btn {
+              width: 100%;
+              height: 100%;
+              border-radius: 10px;
+              border: 1px solid #abddfe;
+              box-shadow: -2px 6px 10px 0 rgba(0, 0, 0, 0.15);
+              background-color: #a8c6fa;
+              @include transitionEaseInOut;
+
+              &:hover {
+                box-shadow: -2px 6px 10px 0 rgba(0, 0, 0, 0.15);
+                background-color: #c0d9ff;
+              }
+
+              &:active {
+                box-shadow: inset -2px 6px 10px 0 rgba(0, 0, 0, 0.15);
+                background-color: #7194d0;
+              }
+            }
+
+            &:last-child {
+              border: none;
+              padding: 0;
+            }
+
+          }
+        }
+      }
+
+      &__conteiner {
+        width: 100%;
+      }
+
+      &__bottom {
+        display: grid;
+        grid-template-columns: 115px 1fr 1fr;
+        gap: 13px;
+        padding-top: 20px;
+        min-width: 960px;
+
+        & p {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 100%;
+          letter-spacing: 0.01em;
+          text-align: center;
+          color: #615f5f
+        }
+
+        &-block {
+          padding-bottom: 30px;
+
+          &__top {
+            margin-bottom: 20px;
+            padding-top: 10px;
+            border-radius: 10px;
+            border: 1px solid #cbe2f1;
+            background-color: #edf3ff;
+
+            &-select {
+              position: relative;
+              display: flex;
+              justify-content: end;
+              align-items: center;
+              gap: 10px;
+              padding-right: 3px;
+              margin-bottom: 8px;
+
+              & select {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -o-appearance: none;
+                appearance: none;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 157%;
+                letter-spacing: 0.01em;
+                text-align: center;
+                color: #615f5f;
+
+                &::placeholder {
+                  font-weight: 400;
+                  font-size: 14px;
+                  line-height: 157%;
+                  letter-spacing: 0.01em;
+                  text-align: center;
+                  color: #615f5f;
+                }
+              }
+            }
+
+            & h4 {
+              margin-bottom: 10px;
+              font-weight: 600;
+              font-size: 12px;
+              line-height: 183%;
+              letter-spacing: 0.01em;
+              text-align: center;
+              color: #742e7a;
+            }
+
+            &-names {
+              margin-left: -1px;
+              margin-bottom: -1px;
+              width: calc(100% + 2px);
+
+              &__name {
+                padding: 14px 0;
+                border-radius: 10px;
+                border: 1px solid #cbe2f1;
+                background-color: #fff;
+              }
+            }
+          }
+
+          &__bottom {
+
+            &-list {
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+
+              &__item {
+                @include flex-center;
+                min-height: 43px;
+                border: 1px solid #cbe2f1;
+                border-radius: 10px;
+                background-color: #fff;
+              }
+            }
+          }
+
+          &:not(:first-child) {
+
+            & .trainingIndicators-exercise__content-block__bottom-block__top {
+
+              &-names {
+                @include grid-ColumnsEqually(4, 5px);
+              }
+            }
+
+            & .trainingIndicators-exercise__content-block__bottom-block__bottom {
+              @include grid-ColumnsEqually(4, 5px);
+            }
+          }
+
+          &:nth-child(2) {
+
+            & .trainingIndicators-exercise__content-block__bottom-block__top {
+              background-color: #f9def6;
+            }
+
+            & .trainingIndicators-exercise__content-block__bottom-block__bottom {
+              &-list {
+
+                &:nth-child(2n+1) {
+
+                  & .trainingIndicators-exercise__content-block__bottom-block__bottom-list__item {
+                    border: 1px solid #d2bdd5;
+                    background-color: #faebfe;
+                  }
+                }
+
+                &:nth-child(2n) {
+
+                  & .trainingIndicators-exercise__content-block__bottom-block__bottom-list__item {
+                    border: 1px solid #d3bad7;
+                    background-color: #f7e0fc;
+                  }
+                }
+              }
+            }
+          }
+
+          &:nth-child(3) {
+
+            & .trainingIndicators-exercise__content-block__bottom-block__top {
+              background-color: #d3e3fc;
+
+              & h4 {
+                color: #173974;
+              }
+            }
+
+            & .trainingIndicators-exercise__content-block__bottom-block__bottom {
+              &-list {
+
+                &:nth-child(2n+1) {
+
+                  & .trainingIndicators-exercise__content-block__bottom-block__bottom-list__item {
+                    border: 1px solid #bbcbe4;
+                    background-color: #edf3ff;
+                  }
+                }
+
+                &:nth-child(2n) {
+
+                  & .trainingIndicators-exercise__content-block__bottom-block__bottom-list__item {
+                    border: 1px solid #bbcbe4;
+                    background-color: #dae9fe;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-child(1) {
+
+        & .trainingIndicators-exercise__content-block__top {
+
+          &-info {
+            background-color: #883d8f;
+
+            &__left {
+              justify-content: end;
+              padding-right: 12px;
+              background-color: #fce2ff;
+              background-image: url(../img/trainingIndicators/exercise/exercise-img1.svg);
+
+              & p {
+                color: #863a8d;
+              }
+            }
+
+            &__right {
+
+              & .subject {
+                background-color: #f1c9fb;
+
+                & p {
+                  color: #883d8f;
+                }
+              }
+            }
+          }
+        }
+
+        & .trainingIndicators-exercise__content-block__bottom {
+
+          &-block {
+
+            &:nth-child(2) {
+
+              & .trainingIndicators-exercise__content-block__bottom-block__bottom {
+
+                &-list {
+
+                  &:nth-child(2n+1) {
+
+                    & .trainingIndicators-exercise__content-block__bottom-block__bottom-list__item {
+                      border: 1px solid #d2bdd5;
+                      background-color: #faebfe;
+                    }
+                  }
+
+                  &:nth-child(2n) {
+
+                    & .trainingIndicators-exercise__content-block__bottom-block__bottom-list__item {
+                      border: 1px solid #d3bad7;
+                      background-color: #f7e0fc;
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+      &:nth-child(2) {
+
+        & .trainingIndicators-exercise__content-block__top {
+
+          &-info {
+            background-color: #03607b;
+
+            &__left {
+              justify-content: end;
+              padding: 0 10px 25px 0;
+              background-color: #c9f1fd;
+              background-image: url(../img/trainingIndicators/exercise/exercise-img2.svg);
+
+              & p {
+                color: #2a4c8c;
+              }
+            }
+
+            &__right {
+
+              & .subject {
+                background-color: #d3e3fc;
+
+                & p {
+                  color: #03607b;
+                }
+              }
+            }
+          }
+        }
+
+        & .trainingIndicators-exercise__content-block__bottom {
+
+          &-block {
+
+            &:nth-child(2) {
+
+              & .trainingIndicators-exercise__content-block__bottom-block__bottom {
+
+                &-list {
+
+                  &:nth-child(2n+1) {
+
+                    & .trainingIndicators-exercise__content-block__bottom-block__bottom-list__item {
+                      border: 1px solid #d2bdd5;
+                      background-color: #faebfe;
+                    }
+                  }
+
+                  &:nth-child(2n) {
+
+                    & .trainingIndicators-exercise__content-block__bottom-block__bottom-list__item {
+                      border: 1px solid #d3bad7;
+                      background-color: #f7e0fc;
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+      &:nth-child(3) {
+
+        & .trainingIndicators-exercise__content-block__top {
+
+          &-info {
+            background-color: #4679a9;
+
+            &__left {
+              justify-content: end;
+              align-items: end;
+              padding: 0 10px 6px 0;
+              background-color: #ecf2fe;
+              background-image: url(../img/trainingIndicators/exercise/exercise-img3-off.svg);
+              background-position-x: 9px;
+
+              & p {
+                color: #4679a9;
+              }
+            }
+
+            &__right {
+
+              & .subject {
+                background-color: #d3e3fc;
+
+                & p {
+                  color: #4679a9;
+                }
+              }
+            }
+          }
+        }
+
+        & .trainingIndicators-exercise__content-block__bottom {
+
+          &-block {
+
+            &:nth-child(2) {
+
+              & .trainingIndicators-exercise__content-block__bottom-block__bottom {
+
+                &-list {
+
+                  &:nth-child(2n+1) {
+
+                    & .trainingIndicators-exercise__content-block__bottom-block__bottom-list__item {
+                      border: 1px solid #d2bdd5;
+                      background-color: #faebfe;
+                    }
+                  }
+
+                  &:nth-child(2n) {
+
+                    & .trainingIndicators-exercise__content-block__bottom-block__bottom-list__item {
+                      border: 1px solid #d3bad7;
+                      background-color: #f7e0fc;
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+      &:nth-child(4) {
+
+        & .trainingIndicators-exercise__content-block__top {
+
+          &-info {
+            background-color: #8166b8;
+
+            &__left {
+              justify-content: end;
+              align-items: flex-start;
+              padding: 8px 4px 0px 0;
+              background-color: #f5efff;
+              background-image: url(../img/trainingIndicators/exercise/exercise-img4.svg);
+
+              & p {
+                color: #8166b8;
+              }
+            }
+
+            &__right {
+
+              & .subject {
+                background-color: #dacafb;
+
+                & p {
+                  color: #8166b8;
+                }
+              }
+            }
+          }
+        }
+
+        & .trainingIndicators-exercise__content-block__bottom {
+
+          &-block {
+
+            &:nth-child(2) {
+
+              & .trainingIndicators-exercise__content-block__bottom-block__bottom {
+
+                &-list {
+
+                  &:nth-child(2n+1) {
+
+                    & .trainingIndicators-exercise__content-block__bottom-block__bottom-list__item {
+                      border: 1px solid #d2bdd5;
+                      background-color: #faebfe;
+                    }
+                  }
+
+                  &:nth-child(2n) {
+
+                    & .trainingIndicators-exercise__content-block__bottom-block__bottom-list__item {
+                      border: 1px solid #d3bad7;
+                      background-color: #f7e0fc;
+                    }
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+      &.active {
+
+        & .trainingIndicators-exercise__content-block__top {
+
+          &-info {
+
+            &__right {
+              padding-top: 0;
+              padding-bottom: 8px;
+              flex-direction: column;
+
+              & .subject {
+                position: relative;
+                top: inherit;
+                left: inherit;
+                background-color: initial;
+
+                & p {
+                  font-weight: 600;
+                  font-size: 16px;
+                  color: #fff;
+                }
+              }
+
+              & h3 {
+                font-weight: 600;
+              }
+            }
+          }
+
+          &-cards {
+
+            &__card {
+
+              &-btn {
+                border: 1px solid #abddfe;
+                box-shadow: inset -2px 6px 10px 0 rgba(0, 0, 0, 0.15);
+                background-color: #7093cf;
+              }
+            }
+          }
+        }
+
+        &:nth-child(1) {
+
+          & .trainingIndicators-exercise__content-block__top {
+
+            &-info {
+              background-color: #cda0e1;
+
+              &__right {
+
+                & .subject {
+
+                  & p {
+                    color: #500857;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &:nth-child(2) {
+
+          & .trainingIndicators-exercise__content-block__top {
+
+            &-info {
+              background-color: #03607b;
+
+              &__left {
+                background-color: #b8d3ff;
+
+                & p {
+                  color: #2a4c8c;
+                }
+              }
+
+              &__right {
+
+                & .subject {
+
+                  & p {
+                    color: #9ccaff;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &:nth-child(3) {
+
+          & .trainingIndicators-exercise__content-block__top {
+
+            &-info {
+              background-color: #3ca690;
+
+              &__left {
+                background-color: #bdefe4;
+                background-image: url(../img/trainingIndicators/exercise/exercise-img3-on.svg);
+                background-position-x: 9px;
+              }
+
+              &__right {
+
+                & .subject {
+
+                  & p {
+                    color: #adf6d9;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &:nth-child(4) {
+
+          & .trainingIndicators-exercise__content-block__top {
+
+            &-info {
+              background-color: #6c96d8;
+
+              &__left {
+                background-color: #d5eaff;
+
+                & p {
+                  color: #6c96d8;
+                }
+              }
+
+              &__right {
+
+                & .subject {
+
+                  & p {
+                    color: #d4e4ff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+
+  .trainingIndicators-hero {
+
+    &__content {
+
+      &-blocks {
+        row-gap: 20px;
+
+        &__block {
+
+          &:nth-child(1) {
+            padding: 0 12px;
+          }
+
+          &:nth-child(2) {
+            padding: 0 12px;
+          }
+
+          &:nth-child(3) {
+            padding: 0 12px;
+          }
+
+          &:nth-child(4) {
+            padding: 0 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .trainingIndicators-exercise {
+
+    &__content {
+
+      &-block {
+
+        &__top {
+          padding-bottom: 20px;
+
+          &-cards {
+            grid-template-columns: repeat(3, 1fr);
+
+            &__card {
+
+              &-btn {
+
+                & svg {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .trainingIndicators-exercise {
+
+    &__content {
+
+      &-block {
+
+        &__top {
+          flex-direction: column;
+
+          &-info {
+            width: 100%;
+
+            &__left {
+              min-width: 120px;
+            }
+
+            &__right {
+              width: 100%;
+              padding: 0;
+
+              & h3 {
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+
+        &.active {
+
+          & .trainingIndicators-exercise__content-block__top {
+
+            &-info {
+
+              &__right {
+                padding: 0;
+
+                & .subject {
+                  padding: 0;
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
