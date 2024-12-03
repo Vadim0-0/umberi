@@ -1366,14 +1366,13 @@
       padding-right: 12px;
 
       &-container {
-        width: 50%;
+        width: auto;
       }
 
 
       &-btn {
-        font-size: 13px;
 
-        & svg {
+        & p {
           display: none;
         }
       }
@@ -1731,29 +1730,6 @@
 
     &__btn {
       font-size: 12px;
-    }
-  }
-}
-
-@media (max-width: 440px) {
-  .index-trainer {
-
-    &__btns {
-
-      &-container {
-        width: auto;
-      }
-
-      &-btn {
-
-        & p {
-          display: none;
-        }
-
-        & svg {
-          display: block;
-        }
-      }
     }
   }
 }
