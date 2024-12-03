@@ -1,6 +1,8 @@
 .header {
 
   &__content {
+    display: flex;
+    align-items: center;
     max-width: 960px;
     padding-top: 7px;
     padding-bottom: 7px;
@@ -28,6 +30,8 @@
       margin-left: 48px;
 
       &__list {
+        display: flex;
+        align-items: center;
         gap: 3px;
 
         & a {
@@ -86,6 +90,10 @@
     }
 
   }
+
+  &-mobile {
+    display: none;
+  }
 }
 
 @media (max-width: 992px) {
@@ -93,6 +101,7 @@
   .header {
 
     &__content {
+      position: relative;
       padding-bottom: 65px;
 
       &-nav {
@@ -111,11 +120,32 @@
   .header {
 
     &__content {
+      position: absolute;
+      flex-direction: column;
+      top: -1000px;
+      left: 0;
+      padding: 10px 0 20px 0;
+      z-index: 5;
+      @include transitionEase;
+
+      &.active {
+        top: 77px;
+      }
+
+      &-logo {
+        display: none;
+      }
 
       &-nav {
+        position: relative;
+        left: inherit;
+        bottom: inherit;
+        transform: none;
+        margin-bottom: 10px;
 
         &__list {
-          overflow-x: auto;
+          flex-direction: column;
+          gap: 14px;
 
           &-item {
 
@@ -127,31 +157,59 @@
           }
         }
       }
+
+      &-link {
+        display: flex;
+        align-items: center;
+
+      }
     }
-  }
-}
 
-@media (max-width: 460px) {
-  .header {
+    &-mobile {
+      display: block;
 
-    &__content {
+      &__content {
+        @include flex-betweenCenter;
+        padding: 10px 10px 15px 10px;
+        border-bottom: 4px solid #c4e1eb;
+        border-left: 4px solid #c4e1eb;
+        border-right: 4px solid #c4e1eb;
+        border-radius: 0 0 10px 10px;
+        background-color: #fdd000;
 
-      &-nav {
-        width: 100%;
-        bottom: 20px;
+        &-btn {
+          @include flex-betweenCenter;
+          flex-direction: column;
+          width: 40px;
+          height: 30px;
+          @include transitionEase;
 
-        &__list {
-          overflow-x: auto;
+          & span {
+            width: 80%;
+            height: 3px;
+            background-color: #000;
+            @include transitionEase;
+          }
 
-          &-item {
+          &.active {
 
-            & a {
-              font-size: 14px;
+            & span {
+
+              &:nth-child(1) {
+                transform: translateY(14px) rotate(45deg);
+              }
+
+              &:nth-child(2) {
+                display: none;
+              }
+
+              &:nth-child(3) {
+                transform: translateY(-13px) rotate(-45deg);
+              }
             }
           }
         }
       }
     }
   }
-
 }
