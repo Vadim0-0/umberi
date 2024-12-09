@@ -137,3 +137,79 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sortingContainers = document.querySelectorAll(".listSimulators-hero__content-right__blocks-top__block");
+
+  sortingContainers.forEach(container => {
+    const sortingBtn = container.querySelector(".list-open");
+    const sortingList = container.querySelector(".block-list");
+    const sortingItems = container.querySelectorAll(".block-list__item");
+
+    // Открытие/закрытие списка при клике на кнопку
+    sortingBtn.addEventListener("click", (event) => {
+      event.stopPropagation();
+      sortingBtn.classList.toggle("active");
+      sortingList.classList.toggle("active");
+    });
+
+    // Закрытие списка при клике вне области
+    sortingBtn.addEventListener("click", (event) => {
+    });
+
+    // Выбор элемента из списка
+    sortingItems.forEach((item) => {
+      item.addEventListener("click", (event) => {
+        // Удалить класс active у всех пунктов в этом контейнере
+        sortingItems.forEach((el) => el.classList.remove("active"));
+
+        // Добавить класс active к выбранному элементу
+        item.classList.add("active");
+
+        // Установить текст выбранного элемента в кнопку
+        const selectedText = item.querySelector("p").textContent;
+        sortingBtn.querySelector("p").textContent = selectedText;
+
+        // Закрыть список
+        sortingBtn.classList.remove("active");
+        sortingList.classList.remove("active");
+      });
+    });
+  });
+
+  // Закрытие списка при клике вне области (global listener)
+  document.addEventListener("click", (event) => {
+    sortingContainers.forEach(container => {
+      const sortingBtn = container.querySelector(".list-open");
+      const sortingList = container.querySelector(".block-list");
+      if (!sortingList.contains(event.target) && !sortingBtn.contains(event.target)) {
+        sortingBtn.classList.remove("active");
+        sortingList.classList.remove("active");
+      }
+    });
+  });
+});
+
+document.querySelectorAll('.oralCountingSimulators-hero__content-blocks__right-content__btns').forEach(container => {
+  // Находим все кнопки внутри текущего контейнера
+  const buttons = container.querySelectorAll('.btn-global.choice');
+
+  buttons.forEach(button => {
+      button.addEventListener('click', () => {
+          // Убираем класс active у всех кнопок
+          buttons.forEach(btn => btn.classList.remove('active'));
+
+          // Добавляем класс active текущей кнопке
+          button.classList.add('active');
+
+          // Находим элемент <p class="answer"> в другом месте (глобально, вне контейнера)
+          const answerElement = document.querySelector('.oralCountingSimulators-hero__content-blocks__right-content__top-right__info .answer');
+
+          if (answerElement) {
+              // Устанавливаем значение из кнопки в элемент <p class="answer">
+              answerElement.textContent = button.textContent.trim();
+          }
+      });
+  });
+});
+
