@@ -1,0 +1,118 @@
+.about-hero {
+  padding: 93px 0 178px 0;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    &-blocks {
+      display: flex;
+
+      &__img {
+        overflow: hidden;
+        border: 1px solid #daecf3;
+        border-radius: 10px;
+        min-width: 360px;
+
+        & img {
+          height: 100%;
+        }
+      }
+
+      &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 22px 45px;
+        border-radius: 10px;
+        border: 1px solid #c4e1eb;
+        background-color: #fff;
+        height: 100%;
+
+        & h3 {
+          margin-bottom: 21px;
+          font-family: var(--second-family);
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 100%;
+          letter-spacing: 0.01em;
+          text-align: center;
+          color: #535353;
+        }
+
+        & .text-editor {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          & p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 137%;
+            letter-spacing: 0.01em;
+            text-align: justify;
+            color: #7688a5;
+          }
+        }
+
+      }
+    }
+
+    &-team {
+      padding: 36px 61px 77px 61px;
+      border: 1px solid #c4e1eb;
+      border-radius: 10px;
+      background-color: #fff;
+
+      & h3 {
+        margin-bottom: 60px;
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        text-align: center;
+        color: #535353;
+      }
+
+      &__blocks {
+        @include grid-ColumnsEqually(4, 22px);
+        row-gap: 46px;
+
+        &-block {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          &__img {
+            width: 168px;
+            overflow: hidden;
+            margin-bottom: 14px;
+            border-radius: 100%;
+            border: 2px solid #aec0d2;
+
+            & img {
+              height: 103%;
+            }
+          }
+
+          & h4 {
+            text-align: center;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 137%;
+            letter-spacing: 0.01em;
+            text-align: center;
+            color: #7688a5;
+
+            & span {
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
