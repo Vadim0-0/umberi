@@ -122,14 +122,18 @@
     &__content {
       position: absolute;
       flex-direction: column;
-      top: -1000px;
+      top: -100px;
       left: 0;
       padding: 10px 0 20px 0;
       z-index: 5;
       @include transitionEase;
+      opacity: 0;
+      visibility: hidden;
 
       &.active {
         top: 77px;
+        opacity: 1;
+        visibility: visible;
       }
 
       &-logo {
