@@ -15,4 +15,167 @@
   '../scss/listSimulatorsMore',
   '../scss/oralCountingSimulators',
   '../scss/oralCountingSimulatorsResult',
-  '../scss/about';
+  '../scss/about',
+  '../scss/notifications',
+  '../scss/personalAccount',
+  '../scss/registration',
+  '../scss/authorization';
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  &-blocks {
+    @include flex-betweenCenter;
+
+    & p {
+      font-family: var(--second-family);
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 167%;
+      letter-spacing: 0.01em;
+      color: #615f5f;
+    }
+
+    &__label {
+      position: relative;
+
+      & input {
+        width: 100%;
+        padding: 11px 30px;
+        border-radius: 10px;
+        font-family: var(--second-family);
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: #615f5f;
+        border: 1px solid #cde4f2;
+        background-color: #fff;
+
+        &::placeholder {
+          font-family: var(--second-family);
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 100%;
+          letter-spacing: 0.01em;
+          color: #615f5f;
+        }
+      }
+
+      & .toggle-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 12px;
+      }
+    }
+
+    &__select {
+      position: relative;
+
+      &.active {
+        & .fields-blocks__select-btn {
+
+          & svg {
+            transform: rotate(180deg);
+          }
+        }
+
+        & .select-list {
+          top: 105%;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      &-btn {
+        @include flex-betweenCenter;
+        width: 100%;
+        padding: 11px 16px 11px 30px;
+        border-radius: 10px;
+        border: 1px solid #cde4f2;
+        background-color: #fff;
+        @include transitionEase;
+
+        & svg {
+          stroke: #615F5F;
+          @include transitionEase;
+        }
+
+        & p {
+          @include transitionEase;
+        }
+
+        &:hover {
+          background-color: #75a9f9;
+
+          & p {
+            color: #fff;
+          }
+
+          & svg {
+            stroke: #fff;
+          }
+        }
+
+        &:active {
+          box-shadow: inset -2px 6px 10px 0 rgba(0, 0, 0, 0.15);
+          background-color: #466eab;
+
+          & p {
+            color: #fff;
+          }
+
+          & svg {
+            stroke: #fff;
+          }
+        }
+      }
+
+      & .select-list {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        width: 100%;
+        top: 40%;
+        left: 0;
+        border-radius: 10px;
+        border: 1px solid #cde4f2;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        @include transitionEaseInOut;
+        z-index: 1;
+
+        &__btn {
+          padding: 16px 30px;
+          text-align: start;
+          @include transitionEase;
+
+          & p {
+            @include transitionEase;
+          }
+
+          &:hover {
+
+            & p {
+              color: #fff;
+            }
+            background-color: #75a9f9;
+          }
+
+          &:active {
+            & p {
+              color: #fff;
+            }
+            box-shadow: inset -2px 6px 10px 0 rgba(0, 0, 0, 0.15);
+            background-color: #466eab;
+          }
+        }
+      }
+    }
+  }
+}
