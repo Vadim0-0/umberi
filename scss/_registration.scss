@@ -1,0 +1,81 @@
+.registration-hero {
+  padding: 70px 0 100px 0;
+
+  &__content {
+    max-width: 604px;
+    margin: auto;
+
+
+    &-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 0 10px 41px 10px;
+      border: 1px solid #c4e1eb;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.01);
+
+      &__top {
+        @include flex-center;
+        width: 232px;
+        min-height: 66px;
+        margin-top: -34px;
+        margin-bottom: 36px;
+        border: 1px solid #c4e1eb;
+        border-radius: 10px;
+        background: #f2fcff;
+
+        & h2 {
+          font-weight: 900;
+          font-size: 14px;
+          line-height: 143%;
+          letter-spacing: 0.01em;
+          color: #4679a9;
+        }
+      }
+
+      & .fields {
+        width: 505px;
+
+        &-blocks {
+          padding-left: 32px;
+
+          &__label {
+            width: 317px;
+          }
+
+          &__select {
+            width: 317px;
+          }
+        }
+      }
+    }
+
+    &-btn {
+      margin: auto;
+      padding: 19px 22px;
+      border: 1px solid #abddfe;
+      border-radius: 10px;
+      box-shadow: -2px 6px 10px 0 rgba(0, 0, 0, 0.15);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 125%;
+      letter-spacing: 0.01em;
+      text-align: center;
+      color: #5b829c;
+      background: #fff;
+
+      &:hover {
+        color: #fff;
+        background-color: #75a9f9;
+      }
+
+      &:active {
+        color: #fff;
+        box-shadow: inset -2px 6px 10px 0 rgba(0, 0, 0, 0.15);
+        background-color: #466eab;
+      }
+    }
+  }
+}
