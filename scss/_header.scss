@@ -13,7 +13,7 @@
     background-color: #fdd000;
 
     &-logo {
-      width: 80px;
+      min-width: 80px;
       height: 60px;
       background-image: url(../img/header/logo.svg);
 
@@ -28,6 +28,7 @@
 
     &-nav {
       margin-left: 48px;
+      @include transitionEase;
 
       &__list {
         display: flex;
@@ -54,7 +55,12 @@
       }
     }
 
+    &-btn {
+      display: none;
+    }
+
     &-link {
+      display: flex;
       margin-left: auto;
 
       & a {
@@ -102,14 +108,56 @@
 
     &__content {
       position: relative;
-      padding-bottom: 65px;
+      align-items: flex-start;
+      padding-right: 47px;
 
       &-nav {
-        position: absolute;
-        left: 50%;
-        bottom: 5px;
-        transform: translateX(-50%);
-        margin-left: 0;
+        overflow: hidden;
+        margin-top: 6px;
+        height: 54px;
+
+        &__list {
+          flex-wrap: wrap;
+        }
+      }
+
+      &-btn {
+        @include flex-betweenCenter;
+        flex-direction: column;
+        margin-top: 17px;
+        margin-right: 26px;
+        min-width: 40px;
+        height: 30px;
+        @include transitionEase;
+
+        & span {
+          width: 80%;
+          height: 3px;
+          background-color: #000;
+          @include transitionEase;
+        }
+
+        &.active {
+
+          & span {
+
+            &:nth-child(1) {
+              transform: translateY(14px) rotate(45deg);
+            }
+
+            &:nth-child(2) {
+              display: none;
+            }
+
+            &:nth-child(3) {
+              transform: translateY(-13px) rotate(-45deg);
+            }
+          }
+        }
+      }
+
+      &-link {
+        margin-top: 5px;
       }
     }
   }
@@ -120,8 +168,22 @@
   .header {
 
     &__content {
+
+      &-nav {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 470px) {
+
+  .header {
+
+    &__content {
       position: absolute;
       flex-direction: column;
+      align-items: center;
       top: -100px;
       left: 0;
       padding: 10px 0 20px 0;
@@ -141,10 +203,7 @@
       }
 
       &-nav {
-        position: relative;
-        left: inherit;
-        bottom: inherit;
-        transform: none;
+        height: auto;
         margin-bottom: 10px;
 
         &__list {
@@ -162,10 +221,12 @@
         }
       }
 
-      &-link {
-        display: flex;
-        align-items: center;
+      &-btn {
+        display: none;
+      }
 
+      &-link {
+        align-items: center;
       }
     }
 
