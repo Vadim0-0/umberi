@@ -1,4 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const menuButton = document.getElementById('header-menu-open');
+  const nav = document.querySelector('.header__content-nav');
+
+  if (!menuButton || !nav) return;
+
+  const initialNavHeight = nav.offsetHeight; // Сохраняем исходную высоту
+
+  menuButton.addEventListener('click', () => {
+      const isActive = menuButton.classList.contains('active');
+
+      if (isActive) {
+          // Возвращаем высоту к исходному значению и удаляем класс active
+          nav.style.height = `${initialNavHeight}px`;
+          menuButton.classList.remove('active');
+      } else {
+          // Увеличиваем высоту до высоты внутренних элементов и добавляем класс active
+          const contentHeight = nav.scrollHeight;
+          nav.style.height = `${contentHeight}px`;
+          menuButton.classList.add('active');
+      }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
   const headerContent = document.querySelector('.header__content');
   const burgerButton = document.getElementById('header-burger-open');
 
@@ -213,3 +237,75 @@ document.querySelectorAll('.oralCountingSimulators-hero__content-blocks__right-c
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  // Получаем все обертки для селектов
+  const selectWrappers = document.querySelectorAll('.fields-blocks__select');
+
+  // Функция для инициализации одного селекта
+  const initSelect = (selectWrapper) => {
+    const mainButton = selectWrapper.querySelector('.fields-blocks__select-btn');
+    const selectList = selectWrapper.querySelector('.select-list');
+    const listButtons = selectList.querySelectorAll('.select-list__btn');
+
+    // Обработка клика по основной кнопке
+    mainButton.addEventListener('click', (event) => {
+      event.stopPropagation(); // Предотвращаем всплытие события
+      // Закрываем другие открытые селекты
+      selectWrappers.forEach(wrapper => {
+        if (wrapper !== selectWrapper) {
+          wrapper.classList.remove('active');
+        }
+      });
+      // Переключаем состояние текущего селекта
+      selectWrapper.classList.toggle('active');
+    });
+
+    // Обработка кликов по кнопкам списка
+    listButtons.forEach(button => {
+      button.addEventListener('click', (event) => {
+        event.stopPropagation(); // Предотвращаем всплытие события
+
+        // Извлекаем текст кнопки и вставляем в основную кнопку
+        const selectedText = button.querySelector('p').textContent;
+        mainButton.querySelector('p').textContent = selectedText;
+
+        // Убираем класс active
+        selectWrapper.classList.remove('active');
+      });
+    });
+  };
+
+  // Инициализируем каждый селект
+  selectWrappers.forEach((selectWrapper) => {
+    initSelect(selectWrapper);
+  });
+
+  // Закрытие всех селектов при клике вне их области
+  document.addEventListener('click', () => {
+    selectWrappers.forEach(wrapper => {
+      wrapper.classList.remove('active');
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const passwordInput = document.getElementById('registrationPassword');
+  const toggleButton = document.getElementById('togglePassword');
+
+  toggleButton.addEventListener('click', () => {
+    // Toggle the type attribute
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const passwordInput = document.getElementById('authorizationPassword');
+  const toggleButton = document.getElementById('togglePassword');
+
+  toggleButton.addEventListener('click', () => {
+    // Toggle the type attribute
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+  });
+});
