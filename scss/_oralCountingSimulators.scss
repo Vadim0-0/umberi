@@ -71,16 +71,21 @@
 
             & p {
               text-align: center;
-              font-weight: 300;
-              font-size: 16px;
-              line-height: 137%;
-              letter-spacing: 0.01em;
+              font-weight: 100;
+              font-size: 64px;
+              line-height: 40%;
+              letter-spacing: 0em;
               text-align: center;
               color: #646f81;
 
               & span {
-                font-weight: 100;
-                font-size: 64px;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 137%;
+              }
+
+              & .icon {
+                display: none
               }
             }
           }
@@ -88,7 +93,7 @@
           &__btns {
             @include grid-ColumnsEqually(3, 10px);
 
-            & button {
+            &-btn {
               min-height: 60px;
               border-radius: 10px;
               border: 1px solid #abddfe;
@@ -137,6 +142,7 @@
       &__right {
 
         &-content {
+          height: 100%;
           padding: 7px 6px 31px 6px;
           border-radius: 10px;
           background-color: #8dacc0;
@@ -273,4 +279,254 @@
       }
     }
   }
+}
+
+@media (max-width: 992px) {
+
+  .oralCountingSimulators-hero {
+    padding: 119px 0 100px 0;
+
+    &__content-title {
+      display: none;
+    }
+
+    &__content {
+
+      &-blocks {
+
+        &__left {
+          padding: 0;
+
+          &-content {
+            position: relative;
+            @include flex-betweenCenter;
+            flex-direction: row-reverse;
+            padding: 9px 15px 20px 15px;
+            border-radius: 10px 10px 0 0;
+            border: 4px solid #c4e1eb;
+
+            &__top {
+              position: absolute;
+              top: -71px;
+              right: 0;
+              margin-bottom: 0;
+
+              &-descr {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+              }
+
+              & h3 {
+                margin-bottom: 0;
+                font-weight: 800;
+                font-size: 24px;
+                color: #5b829c;
+              }
+
+              & p {
+
+                &.theme {
+                  margin-bottom: 0;
+                  font-weight: 900;
+                  font-size: 14px;
+                  color: #5b829c;
+
+                  & br {
+                    display: none;
+                  }
+                }
+
+                &.step {
+                  font-weight: 900;
+                  font-size: 14px;
+                  color: #5b829c;
+                }
+              }
+            }
+
+            &__info {
+              flex-direction: row;
+              padding: 0;
+              margin-bottom: 0;
+              background-color: #cbe2f1;
+              box-shadow: none;
+              gap: 9px;
+
+              & p {
+                @include flex-betweenCenter;
+                width: 151px;
+                height: 54px;
+                padding: 10px 21px;
+                font-weight: 100;
+                font-size: 24px;
+                line-height: 100%;
+                border-radius: 10px;
+                box-shadow: inset 4px 4px 4px 0 rgba(146, 185, 210, 0.63);
+                background: #eaf7ff;
+
+                & span {
+                  display: none;
+                }
+
+                & br {
+                  display: none;
+                }
+
+                & .icon {
+                  display: block;
+                }
+              }
+            }
+
+            &__btns {
+
+              &-btn {
+                width: 54px;
+                min-height: 54px;
+              }
+            }
+          }
+        }
+
+        &__right {
+          padding: 0;
+          margin-top: -10px;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .oralCountingSimulators-hero {
+    padding: 125px 0 100px 0;
+
+    &__content {
+
+      &-blocks {
+
+        &__left {
+
+          &-content {
+            padding: 11px 19px 20px 15px;
+
+            &__info {
+              gap: 13px;
+
+              & p {
+                width: 138px;
+                height: 62px;
+              }
+            }
+
+            &__btns {
+              gap: 13px;
+
+              &-btn {
+                width: 57px;
+                min-height: 61px;
+              }
+            }
+          }
+        }
+
+        &__right {
+          margin-top: -6px;
+
+          &-content {
+            padding: 7px 6px 42px 6px;
+
+            &__top {
+              display: flex;
+              flex-direction: column-reverse;
+              margin-bottom: 8px;
+
+              &-right {
+                min-height: 263px;
+
+                &__info {
+                  flex-wrap: wrap;
+                }
+              }
+
+              &-left {
+                min-height: 243px;
+
+                &__info {
+                  display: flex;
+                  gap: 13px;
+
+                  & div {
+
+                    &:nth-child(3) {
+                      max-width: 170px;
+                    }
+                  }
+                }
+              }
+            }
+
+            &__line {
+              margin-bottom: 40px;
+            }
+
+            &__btns {
+              grid-template-columns: repeat(2, 1fr);
+              row-gap: 16px;
+              padding: 0 31px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .oralCountingSimulators-hero {
+
+    &__content {
+
+      &-blocks {
+        padding: 0 12px;
+
+        &__left {
+
+          &-content {
+            flex-direction: column-reverse;
+            gap: 10px;
+
+            &__top {
+              top: inherit;
+              bottom: 108%;
+
+              & h3 {
+                text-align: end;
+              }
+            }
+
+            &__info {
+              width: 100%;
+
+              & p {
+                width: 100%;
+              }
+            }
+
+            &__btns {
+             width: 100%;
+
+              &-btn {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
