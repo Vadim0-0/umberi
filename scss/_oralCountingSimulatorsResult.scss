@@ -201,3 +201,178 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+
+  .oralCountingSimulatorsResult-hero {
+
+    &__content {
+      position: relative;
+      padding-bottom: 76px;
+
+      &-left {
+        position: absolute;
+        padding: 0;
+        height: 100%;
+
+        &__blocks {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+
+          &-block {
+            padding: 47px 0 13px 0;
+            width: 32%;
+
+            & h3 {
+              margin-bottom: 8px;
+              font-size: 13px;
+              line-height: 114%;
+            }
+
+            & .step {
+              width: 78px;
+              height: 39px;
+              border-radius: 10px;
+
+              & p {
+
+                & br {
+                  display: none
+                }
+              }
+            }
+          }
+
+          &-btns {
+            @include grid-ColumnsEqually(3, 12px);
+
+          }
+        }
+      }
+
+      &-right {
+        position: relative;
+        padding: 0;
+
+        &__top {
+          padding: 5px 30px 10px 68px;
+          width: 66%;
+          margin-left: auto;
+
+          & h3 {
+            max-width: 330px;
+            line-height: 132%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .oralCountingSimulatorsResult-hero {
+    padding: 61px 0 100px 0;
+
+    &__content {
+      padding-bottom: 170px;
+
+      &-left {
+
+        &__blocks {
+
+          &-block {
+            min-height: 139px;
+            width: 49%;
+          }
+
+          &-btns {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 25px;
+
+            &__btn {
+
+              &:last-child {
+                grid-column: span 2;
+              }
+            }
+          }
+        }
+      }
+
+      &-right {
+
+        &__top {
+          width: 49%;
+          min-height: 139px;
+          padding: 9px 36px 10px 36px;
+
+          & h3 {
+            font-size: 20px;
+            line-height: 153%;
+          }
+        }
+
+        &__blocks {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+
+  .oralCountingSimulatorsResult-hero {
+
+    &__content {
+
+      &-left {
+        padding: 0 12px;
+      }
+
+      &-right {
+        padding: 0 12px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .oralCountingSimulatorsResult-hero {
+    padding: 61px 0 70px 0;
+
+    &__content {
+      padding-top: 170px;
+      padding-bottom: 160px;
+
+      &-left {
+
+        &__blocks {
+          margin-top: -157px;
+
+          &-block {
+            width: 100%;
+          }
+        }
+      }
+
+      &-right {
+
+        &__top {
+          justify-content: center;
+          width: 100%;
+        }
+
+        &__blocks {
+          grid-template-columns: auto
+        }
+      }
+    }
+  }
+
+}
