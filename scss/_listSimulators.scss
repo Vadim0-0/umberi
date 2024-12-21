@@ -1,6 +1,6 @@
 .listSimulators-hero {
   padding-top: 61px;
-  padding-bottom: 70px;
+  padding-bottom: 120px;
 
   &__content {
 
@@ -12,20 +12,40 @@
 
       &__block {
         border: 1px solid #cbe2f1;
+        border-radius: 0  010px 10px;
         background-color: #fff;
 
         &:nth-child(1) {
-          padding-top: 18px;
-          border-radius: 0 10px 10px 10px;
+
+          & .listSimulators-hero__content-left__block-top {
+            padding: 44px 0 11px 0;
+          }
 
           & .listSimulators-hero__content-left__block-info {
+            padding: 62px 3px 13px 7px;
 
             &__content {
+              @include grid-ColumnsEqually(3, 5px);
 
               &-blocks {
+                @include flex-center;
+                min-height: 69px;
+                border: 1px solid #d0dde8;
+                border-radius: 10px;
+                background-color: #fff;
 
-                &:nth-child(3) {
-                  grid-column: span 2;
+                & p {
+                  font-weight: 600;
+                  font-size: 20px;
+                  line-height: 70%;
+                  letter-spacing: 0.01em;
+                  text-align: center;
+                  color: #003f79;
+
+                  & span {
+                    font-weight: 400;
+                    font-size: 14px;
+                  }
                 }
               }
             }
@@ -43,7 +63,34 @@
             padding: 29px 0 22px 0;
 
             &__content {
+              display: grid;
+              grid-template-columns: 70px 70px;
+              gap: 4px;
+              justify-content: center;
               margin-bottom: 32px;
+
+              &-blocks {
+                @include flex-center;
+                padding-top: 10px;
+                min-height: 69px;
+                border: 1px solid #b4cadb;
+                border-radius: 10px;
+                background-color: #ecf2fe;
+
+                & p {
+                  font-weight: 600;
+                  font-size: 24px;
+                  line-height: 87%;
+                  letter-spacing: 0em;
+                  text-align: center;
+                  color: #4679a9;
+
+                  & span {
+                    font-weight: 400;
+                    font-size: 14px;
+                  }
+                }
+              }
             }
 
             &__text {
@@ -66,7 +113,7 @@
 
         &-top {
           position: relative;
-          padding: 27px 0;
+          padding: 27px 0 27px 0;
           border-top: 1px solid #c9d9e8;
           border-bottom: 1px solid #c9d9e8;
           background-color: #ecf2fe;
@@ -82,59 +129,38 @@
 
           & span {
             position: absolute;
-            padding: 11px 15px;
-            background-color: #4679a9;
-
-            & p {
-              font-weight: 1000;
-              font-size: 12px;
-              line-height: 100%;
-              letter-spacing: 0.01em;
-              color: #fff;
-            }
 
             &.first {
-              top: -19px;
+              top: 0;
               left: 0;
+              padding: 11px 15px;
+              background-color: #4679a9;
               border-radius: 0 10px 10px 0;
+
+              & p {
+                text-wrap: nowrap;
+                font-weight: 1000;
+                font-size: 12px;
+                line-height: 100%;
+                letter-spacing: 0.01em;
+                color: #fff;
+              }
             }
 
             &.second {
-              bottom: -15px;
-              right: 0;
+              bottom: -41px;
+              left: 50%;
+              transform: translateX(-50%);
               border-radius: 10px 0 0 10px;
-            }
-          }
-        }
-
-        &-info {
-          padding: 38px 0 20px 0;
-
-          &__content {
-            display: grid;
-            grid-template-columns: 70px 70px;
-            gap: 4px;
-            justify-content: center;
-
-            &-blocks {
-              @include flex-center;
-              padding: 16px 0 6px 0;
-              border: 1px solid #b4cadb;
-              border-radius: 10px;
-              background-color: #ecf2fe;
 
               & p {
+                text-wrap: nowrap;
                 font-weight: 600;
-                font-size: 24px;
-                line-height: 87%;
-                letter-spacing: 0em;
+                font-size: 16px;
+                line-height: 157%;
+                letter-spacing: 0.01em;
                 text-align: center;
-                color: #4679a9;
-
-                & span {
-                  font-weight: 400;
-                  font-size: 14px;
-                }
+                color: #003f79;
               }
             }
           }
@@ -305,6 +331,7 @@
 
               &__content {
                 position: relative;
+                overflow: hidden;
                 @include flex-center;
                 min-height: 155px;
                 border-radius: 10px;
@@ -939,13 +966,26 @@
   .listSimulators-hero {
 
     &__content {
+      position: relative;
+      padding-top: 71px;
+
+      &-left {
+        padding-left: 0;
+        padding-right: 11px;
+      }
 
       &-right {
+        padding-left: 7px;
+        padding-right: 0;
 
         &__blocks {
 
           &-top {
-            grid-template-columns: repeat(2, 1fr);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin-bottom: 0;
           }
 
           &-bottom {
@@ -963,6 +1003,112 @@
 
     &__content {
       gap: 20px;
+
+      &-left {
+        display: none;
+      }
+
+      &-right {
+
+        &__blocks {
+
+          &-top {
+
+            &__block {
+
+              & .list-open {
+                padding: 10px 10px 10px 10px;
+              }
+            }
+          }
+
+          &-bottom {
+
+            &__block {
+
+              &:nth-child(10) {
+
+                & .listSimulators-hero__content-right__blocks-bottom__block-info {
+
+                  &__content {
+
+                    &-img {
+                      min-width: 101%;
+                      min-height: 101%;
+                    }
+                  }
+                }
+              }
+
+              &:nth-child(11) {
+
+                & .listSimulators-hero__content-right__blocks-bottom__block-info {
+
+                  &__content {
+                    outline: 1px solid #383e30;
+
+                    &-img {
+                      min-width: 101%;
+                      min-height: 101%;
+                    }
+                  }
+                }
+              }
+
+              &:nth-child(12) {
+
+                & .listSimulators-hero__content-right__blocks-bottom__block-info {
+
+                  &__content {
+                    outline: 1px solid #5c2d09;
+
+                    &-img {
+                      min-width: 101%;
+                      min-height: 101%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .listSimulators-hero {
+
+    &__content {
+      padding-top: 130px;
+
+      &-right {
+
+        &__blocks {
+
+          &-top {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          &-bottom {
+
+            &__block {
+
+              &-info {
+
+                &__content {
+
+                  &-img {
+                    max-height: 100%;
+                  }
+                }
+              }
+            }
+          }
+
+        }
+      }
     }
   }
 }
@@ -977,12 +1123,8 @@
 
         &__blocks {
 
-          &-top {
-            grid-template-columns: auto;
-          }
-
           &-bottom {
-            grid-template-columns: auto;
+
           }
         }
       }
