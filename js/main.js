@@ -173,12 +173,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // Открытие/закрытие списка при клике на кнопку
     sortingBtn.addEventListener("click", (event) => {
       event.stopPropagation();
+
+      // Закрыть все остальные списки
+      sortingContainers.forEach(otherContainer => {
+        if (otherContainer !== container) {
+          const otherBtn = otherContainer.querySelector(".list-open");
+          const otherList = otherContainer.querySelector(".block-list");
+          otherBtn.classList.remove("active");
+          otherList.classList.remove("active");
+        }
+      });
+
+      // Переключить состояние текущего списка
       sortingBtn.classList.toggle("active");
       sortingList.classList.toggle("active");
-    });
-
-    // Закрытие списка при клике вне области
-    sortingBtn.addEventListener("click", (event) => {
     });
 
     // Выбор элемента из списка
@@ -213,6 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const sortingContainers = document.querySelectorAll(".listSimulatorsMore-hero__content-right__blocks-top__block");
@@ -225,12 +234,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // Открытие/закрытие списка при клике на кнопку
     sortingBtn.addEventListener("click", (event) => {
       event.stopPropagation();
+
+      // Закрыть все остальные списки
+      sortingContainers.forEach(otherContainer => {
+        if (otherContainer !== container) {
+          const otherBtn = otherContainer.querySelector(".list-open");
+          const otherList = otherContainer.querySelector(".block-list");
+          otherBtn.classList.remove("active");
+          otherList.classList.remove("active");
+        }
+      });
+
+      // Переключить состояние текущего списка
       sortingBtn.classList.toggle("active");
       sortingList.classList.toggle("active");
-    });
-
-    // Закрытие списка при клике вне области
-    sortingBtn.addEventListener("click", (event) => {
     });
 
     // Выбор элемента из списка
@@ -265,6 +282,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 document.querySelectorAll('.oralCountingSimulators-hero__content-blocks__right-content__btns').forEach(container => {
   // Находим все кнопки внутри текущего контейнера
