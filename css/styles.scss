@@ -87,6 +87,7 @@
           top: 105%;
           opacity: 1;
           visibility: visible;
+          pointer-events: all;
         }
       }
 
@@ -147,7 +148,8 @@
         background-color: #fff;
         opacity: 0;
         visibility: hidden;
-        @include transitionEaseInOut;
+        pointer-events: none;
+        @include transitionEase;
         z-index: 1;
 
         &__btn {
