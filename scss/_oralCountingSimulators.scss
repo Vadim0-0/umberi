@@ -1,14 +1,14 @@
 .oralCountingSimulators-hero {
-  padding: 112px 0 100px 0;
+  padding: 56px 0 100px 0;
 
   & h1 {
-    margin-bottom: 73px;
+    margin-bottom: 8px;
     font-weight: 800;
-    font-size: 36px;
-    line-height: 100%;
+    font-size: 32px;
+    line-height: 112%;
     letter-spacing: 0em;
-    text-align: center;
-    color: #3e506d;
+    text-align: right;
+    color: #5b829c;
   }
 
   &__content {
@@ -61,7 +61,7 @@
           }
 
           &__info {
-            @include flex-center(50px);
+            @include flex-center(38px);
             flex-direction: column;
             padding: 61px 10px 43px 10px;
             margin-bottom: 24px;
@@ -454,9 +454,12 @@
 
               &-left {
                 min-height: 243px;
+                padding: 10px 10px;
 
                 &__info {
-                  display: flex;
+                  display: grid;
+                  grid-template-columns: 1fr auto 1fr;
+                  align-items: center;
                   gap: 13px;
 
                   & div {
@@ -529,4 +532,35 @@
     }
   }
 
+}
+
+@media (max-width: 440px) {
+
+  .oralCountingSimulators-hero {
+
+    &__content {
+
+      &-blocks {
+
+        &__right {
+
+          &-content {
+
+            &__top {
+
+              &-left {
+
+                &__info {
+
+                  & div {
+                    justify-content: center;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
