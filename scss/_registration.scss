@@ -79,3 +79,90 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+
+  .registration-hero {
+    padding: 99px 0 100px 0;
+
+    &__content {
+
+      &-block {
+
+        .fields {
+          gap: 9px;
+
+          &-blocks {
+
+            &__label {
+
+              & input {
+                padding: 13px 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .registration-hero {
+
+    &__content {
+
+      &-block {
+
+        .fields {
+          gap: 9px;
+
+          &-blocks {
+            padding-left: 45px;
+            padding-right: 19px;
+
+            &__label {
+              width: 285px;
+            }
+
+            &__select {
+              width: 285px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .registration-hero {
+
+    &__content {
+
+      &-block {
+
+        .fields {
+          width: 100%;
+          gap: 9px;
+
+          &-blocks {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            &__label {
+              width: 100%;
+            }
+
+            &__select {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
