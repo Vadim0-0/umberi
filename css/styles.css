@@ -2410,8 +2410,8 @@ button {
   }
 }
 @media (max-width: 532px) {
-  .index-trainer__content-right__block-info__btns {
-    grid-template-columns: auto;
+  .index-trainer__content-right__block-info {
+    padding: 25px 10px;
   }
   .index-fourth__content-blocks__block-info p {
     font-size: 14px;
@@ -2461,6 +2461,21 @@ button {
   }
   .index-seventh__content-blocks__block-content h3 {
     font-size: 18px;
+  }
+  .index-questions__content {
+    padding: 30px 20px;
+  }
+  .index-questions__content-blocks:nth-child(2n+1) {
+    margin-left: 10px;
+  }
+  .index-questions__content-blocks:nth-child(2n+1) .index-questions__content-blocks__block-content {
+    padding: 13px 15px 13px 36px;
+  }
+  .index-questions__content-blocks:nth-child(2n) {
+    margin-right: 10px;
+  }
+  .index-questions__content-blocks:nth-child(2n) .index-questions__content-blocks__block-content {
+    padding: 13px 36px 13px 15px;
   }
 }
 @media (max-width: 470px) {
@@ -4244,9 +4259,17 @@ button {
 @media (max-width: 768px) {
   .listSimulators-hero__content {
     gap: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
   .listSimulators-hero__content-left {
     display: none;
+  }
+  .listSimulators-hero__content-right {
+    padding-left: 0;
+  }
+  .listSimulators-hero__content-right__blocks-top {
+    padding: 0 12px;
   }
   .listSimulators-hero__content-right__blocks-top__block .list-open {
     padding: 10px 10px 10px 10px;
@@ -4786,6 +4809,7 @@ button {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
+    padding: 0 21px;
   }
   .listSimulatorsMore-hero__content-left__block:nth-child(1) {
     padding-top: 40px;
@@ -4859,6 +4883,12 @@ button {
   .listSimulatorsMore-hero__content {
     padding-top: 130px;
   }
+  .listSimulatorsMore-hero__content-left {
+    grid-template-columns: auto;
+  }
+  .listSimulatorsMore-hero__content-left__block:nth-child(1) {
+    padding-bottom: 20px;
+  }
   .listSimulatorsMore-hero__content-right__blocks-top {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -4867,12 +4897,6 @@ button {
   }
 }
 @media (max-width: 450px) {
-  .listSimulatorsMore-hero__content-left {
-    grid-template-columns: auto;
-  }
-  .listSimulatorsMore-hero__content-left__block:nth-child(1) {
-    padding-bottom: 20px;
-  }
   .listSimulatorsMore-hero__content-right__blocks-block__info {
     grid-template-columns: auto;
   }
@@ -5753,8 +5777,12 @@ button {
   }
 }
 @media (max-width: 470px) {
+  .about-hero__content-team {
+    padding: 40px 10px 54px 10px;
+  }
   .about-hero__content-team__blocks {
-    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    row-gap: 30px;
   }
 }
 .notifications-hero {
