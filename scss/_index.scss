@@ -2088,9 +2088,7 @@
 
           &-info {
 
-            &__btns {
-              grid-template-columns: auto;
-            }
+            padding: 25px 10px;
           }
         }
       }
@@ -2243,6 +2241,32 @@
             & h3 {
               font-size: 18px;
             }
+          }
+        }
+      }
+    }
+  }
+
+  .index-questions {
+
+    &__content {
+      padding: 30px 20px;
+
+      &-blocks {
+
+        &:nth-child(2n+1) {
+          margin-left: 10px;
+
+          & .index-questions__content-blocks__block-content {
+            padding: 13px 15px 13px 36px;
+          }
+        }
+
+        &:nth-child(2n) {
+          margin-right: 10px;
+
+          & .index-questions__content-blocks__block-content {
+            padding: 13px 36px 13px 15px;
           }
         }
       }
