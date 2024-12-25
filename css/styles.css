@@ -3700,6 +3700,8 @@ button {
   left: 0;
   top: 0;
   width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
   border: 1px solid #cde4f2;
   border-radius: 10px;
   background-color: #fff;
@@ -4512,6 +4514,8 @@ button {
   left: 0;
   top: 0;
   width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
   border: 1px solid #cde4f2;
   border-radius: 10px;
   background-color: #fff;
