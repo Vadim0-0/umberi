@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const sortingContainers = document.querySelectorAll(".listSimulators -hero__content-right__blocks-top__block");
+  const sortingContainers = document.querySelectorAll(".listSimulators-hero__content-right__blocks-top__block");
 
   sortingContainers.forEach(container => {
     const sortingBtn = container.querySelector(".list-open");
@@ -221,7 +221,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const sortingContainers = document.querySelectorAll(".listSimulatorsMore-hero__content-right__blocks-top__block");
