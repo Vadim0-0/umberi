@@ -213,10 +213,11 @@
     &__content {
 
       &-team {
+        padding: 40px 10px 54px 10px;
 
         &__blocks {
-
-          grid-template-columns: repeat(1, 1fr);
+          gap: 10px;
+          row-gap: 30px;
         }
       }
     }
