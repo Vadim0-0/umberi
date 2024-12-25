@@ -684,6 +684,7 @@
 
       &-left {
         @include grid-ColumnsEqually(2, 14px);
+        padding: 0 21px;
 
         &__block {
 
@@ -794,6 +795,17 @@
     &__content {
       padding-top: 130px;
 
+      &-left {
+        grid-template-columns: auto;
+
+        &__block {
+
+          &:nth-child(1) {
+            padding-bottom: 20px;
+          }
+        }
+      }
+
       &-right {
 
         &__blocks {
@@ -828,17 +840,6 @@
   .listSimulatorsMore-hero {
 
     &__content {
-
-      &-left {
-        grid-template-columns: auto;
-
-        &__block {
-
-          &:nth-child(1) {
-            padding-bottom: 20px;
-          }
-        }
-      }
 
       &-right {
 
