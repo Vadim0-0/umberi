@@ -3472,6 +3472,12 @@ button {
   .trainingIndicators-hero .container {
     padding: 0 12px;
   }
+  .trainingIndicators-hero__content-blocks__block-content {
+    min-height: 200px;
+  }
+  .trainingIndicators-hero__content-blocks__block-content__top {
+    min-height: 82px;
+  }
   .trainingIndicators-hero__content-blocks__block:nth-child(1) {
     padding-left: 12px;
   }
@@ -4974,14 +4980,13 @@ button {
   .listSimulatorsMore-hero__content-right__blocks-bottom__block-info__content-img {
     max-height: 100%;
   }
-  .listSimulatorsMore-hero__content-right__blocks-block__info-content .name p {
-    font-size: 11px;
+  .listSimulatorsMore-hero__content-right__blocks-info__content {
+    padding: 28px 20px 45px 20px;
   }
-  .listSimulatorsMore-hero__content-right__blocks-block__info-content__top h4 {
-    font-size: 13px;
-  }
-  .listSimulatorsMore-hero__content-right__blocks-block__info-content__img {
-    width: 90%;
+  .listSimulatorsMore-hero__content-right__blocks-info__content .text-editor p {
+    font-size: 14px;
+    line-height: 137%;
+    letter-spacing: 0.007em;
   }
 }
 .oralCountingSimulators-hero {
@@ -5423,6 +5428,10 @@ button {
     font-size: 40px;
   }
   .oralCountingSimulators-hero__content-blocks__right-content__top-right__info p.answer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
     width: 120px;
     height: 50px;
   }
@@ -6176,15 +6185,21 @@ button {
 }
 @media (max-width: 400px) {
   .personalAccount-hero__content-right .fields-blocks {
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 5px;
   }
   .personalAccount-hero__content-right .fields-blocks__label {
     width: 100%;
   }
+  .personalAccount-hero__content-right .fields-blocks__label input {
+    padding: 14px 10px;
+  }
   .personalAccount-hero__content-right .fields-blocks__select {
     width: 100%;
+  }
+  .personalAccount-hero__content-right .fields-blocks__select button {
+    padding: 14px 10px;
   }
 }
 .registration-hero {
