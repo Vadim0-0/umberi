@@ -816,14 +816,14 @@ button {
     align-items: center;
     top: -100px;
     left: 0;
-    padding: 10px 0 20px 0;
+    padding: 10px 0 10px 0;
     z-index: 5;
     transition: all 0.5s ease;
     opacity: 0;
     visibility: hidden;
   }
   .header__content.active {
-    top: 60px;
+    top: 50px;
     opacity: 1;
     visibility: visible;
   }
@@ -842,12 +842,16 @@ button {
     padding: 5px;
     border: none;
     font-size: 14px;
+    line-height: 100%;
   }
   .header__content-btn {
     display: none;
   }
   .header__content-link {
     align-items: center;
+  }
+  .header__content-link a {
+    padding: 10px 15px;
   }
   .header-mobile {
     display: block;
@@ -864,26 +868,26 @@ button {
     background-color: #fdd000;
   }
   .header-mobile__content-logo svg {
-    width: 70px;
-    height: 50px;
+    width: 60px;
+    height: 40px;
   }
   .header-mobile__content-btn {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    width: 40px;
-    height: 25px;
+    width: 30px;
+    height: 20px;
     transition: all 0.5s ease;
   }
   .header-mobile__content-btn span {
     width: 80%;
-    height: 3px;
+    height: 2px;
     background-color: #000;
     transition: all 0.5s ease;
   }
   .header-mobile__content-btn.active span:nth-child(1) {
-    transform: translateY(13px) rotate(45deg);
+    transform: translateY(9px) rotate(45deg);
   }
   .header-mobile__content-btn.active span:nth-child(2) {
     display: none;
