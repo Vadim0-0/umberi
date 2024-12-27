@@ -214,16 +214,22 @@
         & .fields {
 
           &-blocks {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 5px;
+            @include grid-ColumnsEqually(2, 5px);
 
             &__label {
               width: 100%;
+
+              & input {
+                padding: 14px 10px;
+              }
             }
 
             &__select {
               width: 100%;
+
+              & button {
+                padding: 14px 10px;
+              }
             }
           }
         }
