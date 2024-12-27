@@ -1095,8 +1095,10 @@ button {
   background-color: var(--white);
   color: #5d6c82;
 }
-.index-trainer__content-right__block-info__btns-btn svg {
+.index-trainer__content-right__block-info__btns-btn span {
   min-width: 70px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 .index-trainer__content-right__block-info__btns-btn p {
   width: 100%;
@@ -2068,7 +2070,7 @@ button {
     padding-bottom: 65px;
   }
   .index-trainer h2 {
-    top: 228px;
+    top: 270px;
   }
   .index-trainer__content {
     gap: 0;
@@ -2096,6 +2098,11 @@ button {
   }
   .index-trainer__content-left__info-block:nth-child(1) {
     margin-bottom: 0;
+  }
+  .index-trainer__content-left__info-block h4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .index-trainer__content-left__bottom {
     position: relative;
@@ -2437,14 +2444,14 @@ button {
   .index-fifth__content-blocks__block-content__info-descrs {
     padding-right: 0;
   }
-  .index-fifth__content-blocks__block-content__info-descrs p {
-    font-size: 14px;
-  }
   .index-sixth__content-blocks__block:nth-child(1) .index-sixth__content-blocks__block-content__list-item .number p {
     font-size: 24px;
   }
   .index-sixth__content-blocks__block:nth-child(1) .index-sixth__content-blocks__block-content__list-item p {
     font-size: 16px;
+  }
+  .index-sixth__content-blocks__block:nth-child(2) .index-sixth__content-blocks__block-content__list-item__block {
+    padding: 0 10px;
   }
   .index-seventh {
     padding: 40px 0 60px 0;
@@ -2483,13 +2490,17 @@ button {
     display: flex;
     flex-direction: column;
     padding-left: 12px;
-    top: 267px;
+    top: 310px;
+    line-height: 110%;
   }
   .index-trainer__content-left__info {
     margin-bottom: 132px;
   }
   .index-trainer__content-left__info-block {
     padding: 21px 10px 24px 10px;
+  }
+  .index-trainer__btns button {
+    font-size: 12px;
   }
   .index-fourth__arrow picture:nth-child(1) {
     top: 283px;
@@ -2510,7 +2521,7 @@ button {
 }
 @media (max-width: 400px) {
   .index-trainer h2 {
-    top: 20%;
+    top: 26%;
   }
   .index-fourth__content-blocks:nth-child(1) .index-fourth__content-blocks__block:nth-child(1) {
     min-height: 130px;
@@ -4302,6 +4313,15 @@ button {
   .listSimulators-hero__content-right__blocks-top {
     grid-template-columns: repeat(2, 1fr);
   }
+  .listSimulators-hero__content-right__blocks-bottom__block .variety {
+    font-size: 11px;
+  }
+  .listSimulators-hero__content-right__blocks-bottom__block-top {
+    padding: 5px 10px;
+  }
+  .listSimulators-hero__content-right__blocks-bottom__block-top h3 {
+    font-size: 13px;
+  }
   .listSimulators-hero__content-right__blocks-bottom__block-info__content-img {
     max-height: 100%;
   }
@@ -4412,6 +4432,14 @@ button {
   width: calc(100% + 2px);
   border-radius: 0 10px 0 0;
   background-color: #ccbeb0;
+}
+.listSimulatorsMore-hero__content-left__block-top h4 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 137%;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #4b3e35;
 }
 .listSimulatorsMore-hero__content-left__block-info {
   display: flex;
@@ -4578,7 +4606,7 @@ button {
 .listSimulatorsMore-hero__content-right__blocks-info__content .text-editor p {
   font-family: var(--second-family);
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 167%;
   letter-spacing: 0.01em;
   text-align: justify;
@@ -4888,10 +4916,26 @@ button {
     padding-top: 130px;
   }
   .listSimulatorsMore-hero__content-left {
-    grid-template-columns: auto;
+    padding: 0;
+  }
+  .listSimulatorsMore-hero__content-left__block-top h4 {
+    font-size: 14px;
   }
   .listSimulatorsMore-hero__content-left__block:nth-child(1) {
     padding-bottom: 20px;
+  }
+  .listSimulatorsMore-hero__content-left__block:nth-child(1) h3 {
+    font-size: 13px;
+  }
+  .listSimulatorsMore-hero__content-left__block-img {
+    width: 90%;
+  }
+  .listSimulatorsMore-hero__content-left__block:nth-child(3) .listSimulatorsMore-hero__content-left__block-info__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .listSimulatorsMore-hero__content-left__block:nth-child(3) .listSimulatorsMore-hero__content-left__block-info__list-item {
+    width: auto;
+    padding: 0 5px;
   }
   .listSimulatorsMore-hero__content-right__blocks-top {
     grid-template-columns: repeat(2, 1fr);
@@ -4899,10 +4943,14 @@ button {
   .listSimulatorsMore-hero__content-right__blocks-bottom__block-info__content-img {
     max-height: 100%;
   }
-}
-@media (max-width: 450px) {
-  .listSimulatorsMore-hero__content-right__blocks-block__info {
-    grid-template-columns: auto;
+  .listSimulatorsMore-hero__content-right__blocks-block__info-content .name p {
+    font-size: 11px;
+  }
+  .listSimulatorsMore-hero__content-right__blocks-block__info-content__top h4 {
+    font-size: 13px;
+  }
+  .listSimulatorsMore-hero__content-right__blocks-block__info-content__img {
+    width: 90%;
   }
 }
 .oralCountingSimulators-hero {
@@ -5302,7 +5350,7 @@ button {
     padding: 0 12px;
   }
   .oralCountingSimulators-hero__content-blocks__left-content {
-    flex-direction: column-reverse;
+    padding: 11px 10px 20px 10px;
     gap: 10px;
   }
   .oralCountingSimulators-hero__content-blocks__left-content__top {
@@ -5313,21 +5361,46 @@ button {
     text-align: end;
   }
   .oralCountingSimulators-hero__content-blocks__left-content__info {
+    gap: 5px;
     width: 100%;
   }
   .oralCountingSimulators-hero__content-blocks__left-content__info p {
+    height: auto;
     width: 100%;
+    padding: 15px 10px;
+    font-size: 15px;
+    gap: 5px;
+  }
+  .oralCountingSimulators-hero__content-blocks__left-content__info p .icon {
+    width: 20px;
+    height: 22px;
   }
   .oralCountingSimulators-hero__content-blocks__left-content__btns {
+    gap: 5px;
     width: 100%;
   }
   .oralCountingSimulators-hero__content-blocks__left-content__btns-btn {
+    padding: 15px 10px;
+    min-height: auto;
     width: 100%;
   }
-}
-@media (max-width: 440px) {
-  .oralCountingSimulators-hero__content-blocks__right-content__top-left__info div {
-    justify-content: center;
+  .oralCountingSimulators-hero__content-blocks__left-content__btns-btn svg {
+    width: 27px;
+    height: 20px;
+  }
+  .oralCountingSimulators-hero__content-blocks__right-content__top-right__info p {
+    font-size: 40px;
+  }
+  .oralCountingSimulators-hero__content-blocks__right-content__top-right__info p.answer {
+    width: 120px;
+    height: 50px;
+  }
+  .oralCountingSimulators-hero__content-blocks__right-content__top-left__info div:nth-child(1) {
+    justify-content: end;
+  }
+  .oralCountingSimulators-hero__content-blocks__right-content__top-left__info div span svg {
+    width: 25px;
+    height: 25px;
   }
 }
 .oralCountingSimulatorsResult-hero {
@@ -5598,24 +5671,35 @@ button {
 }
 @media (max-width: 500px) {
   .oralCountingSimulatorsResult-hero {
-    padding: 61px 0 70px 0;
+    padding: 61px 0 120px 0;
   }
   .oralCountingSimulatorsResult-hero__content {
-    padding-top: 170px;
+    padding-top: 20px;
     padding-bottom: 160px;
   }
-  .oralCountingSimulatorsResult-hero__content-left__blocks {
-    margin-top: -157px;
-  }
   .oralCountingSimulatorsResult-hero__content-left__blocks-block {
-    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .oralCountingSimulatorsResult-hero__content-right__top {
     justify-content: center;
-    width: 100%;
   }
-  .oralCountingSimulatorsResult-hero__content-right__blocks {
-    grid-template-columns: auto;
+  .oralCountingSimulatorsResult-hero__content-right__top h3 {
+    font-size: 16px;
+  }
+  .oralCountingSimulatorsResult-hero__content-right__blocks-block p {
+    font-size: 40px;
+  }
+  .oralCountingSimulatorsResult-hero__content-right__blocks-block p span {
+    top: 10px;
+    right: -34px;
+    font-weight: 100;
+    font-size: 17px;
+  }
+}
+@media (max-width: 435px) {
+  .oralCountingSimulatorsResult-hero__content-right__top {
+    min-height: 155px;
   }
 }
 .about-hero {
@@ -6043,8 +6127,7 @@ button {
 }
 @media (max-width: 470px) {
   .personalAccount-hero__content-left {
-    flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     padding: 0 12px 0 12px;
   }
   .personalAccount-hero__content-left__block {
@@ -6052,6 +6135,9 @@ button {
   }
   .personalAccount-hero__content-left__btns {
     width: 100%;
+  }
+  .personalAccount-hero__content-left__btns-btn {
+    font-size: 14px;
   }
   .personalAccount-hero__content-right {
     padding-left: 12px;
