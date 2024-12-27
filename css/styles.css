@@ -823,7 +823,7 @@ button {
     visibility: hidden;
   }
   .header__content.active {
-    top: 77px;
+    top: 60px;
     opacity: 1;
     visibility: visible;
   }
@@ -856,12 +856,16 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10px 15px 10px;
+    padding: 10px 10px 10px 10px;
     border-bottom: 4px solid #c4e1eb;
     border-left: 4px solid #c4e1eb;
     border-right: 4px solid #c4e1eb;
     border-radius: 0 0 10px 10px;
     background-color: #fdd000;
+  }
+  .header-mobile__content-logo svg {
+    width: 70px;
+    height: 50px;
   }
   .header-mobile__content-btn {
     display: flex;
@@ -869,7 +873,7 @@ button {
     align-items: center;
     flex-direction: column;
     width: 40px;
-    height: 30px;
+    height: 25px;
     transition: all 0.5s ease;
   }
   .header-mobile__content-btn span {
@@ -879,13 +883,13 @@ button {
     transition: all 0.5s ease;
   }
   .header-mobile__content-btn.active span:nth-child(1) {
-    transform: translateY(14px) rotate(45deg);
+    transform: translateY(13px) rotate(45deg);
   }
   .header-mobile__content-btn.active span:nth-child(2) {
     display: none;
   }
   .header-mobile__content-btn.active span:nth-child(3) {
-    transform: translateY(-13px) rotate(-45deg);
+    transform: translateY(-9px) rotate(-45deg);
   }
 }
 .footer {
@@ -4313,7 +4317,7 @@ button {
   .listSimulators-hero__content-right__blocks-top {
     grid-template-columns: repeat(2, 1fr);
   }
-  .listSimulators-hero__content-right__blocks-bottom__block .variety {
+  .listSimulators-hero__content-right__blocks-bottom__block .variety p {
     font-size: 11px;
   }
   .listSimulators-hero__content-right__blocks-bottom__block-top {
@@ -4917,9 +4921,26 @@ button {
   }
   .listSimulatorsMore-hero__content-left {
     padding: 0;
+    gap: 5px;
+  }
+  .listSimulatorsMore-hero__content-left__block .first {
+    top: 0;
+    left: 0;
+  }
+  .listSimulatorsMore-hero__content-left__block .first p {
+    font-size: 11px;
+  }
+  .listSimulatorsMore-hero__content-left__block-top {
+    margin-bottom: 25px;
   }
   .listSimulatorsMore-hero__content-left__block-top h4 {
     font-size: 14px;
+  }
+  .listSimulatorsMore-hero__content-left__block-info__list-item p {
+    font-size: 16px;
+  }
+  .listSimulatorsMore-hero__content-left__block-info__list-item p span {
+    font-size: 12px;
   }
   .listSimulatorsMore-hero__content-left__block:nth-child(1) {
     padding-bottom: 20px;
@@ -4932,10 +4953,16 @@ button {
   }
   .listSimulatorsMore-hero__content-left__block:nth-child(3) .listSimulatorsMore-hero__content-left__block-info__list {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
   }
   .listSimulatorsMore-hero__content-left__block:nth-child(3) .listSimulatorsMore-hero__content-left__block-info__list-item {
     width: auto;
+    height: 60px;
     padding: 0 5px;
+  }
+  .listSimulatorsMore-hero__content-left__block-btn {
+    position: absolute;
+    bottom: 0;
   }
   .listSimulatorsMore-hero__content-right__blocks-top {
     grid-template-columns: repeat(2, 1fr);
