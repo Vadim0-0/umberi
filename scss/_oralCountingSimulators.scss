@@ -499,7 +499,7 @@
         &__left {
 
           &-content {
-            flex-direction: column-reverse;
+            padding: 11px 10px 20px 10px;
             gap: 10px;
 
             &__top {
@@ -512,35 +512,40 @@
             }
 
             &__info {
+              gap: 5px;
               width: 100%;
 
               & p {
+                height: auto;
                 width: 100%;
+                padding: 15px 10px;
+                font-size: 15px;
+                gap: 5px;
+
+                & .icon {
+                  width: 20px;
+                  height: 22px;
+                }
               }
             }
 
             &__btns {
-             width: 100%;
+              gap: 5px;
+              width: 100%;
 
               &-btn {
+                padding: 15px 10px;
+                min-height: auto;
                 width: 100%;
+
+                & svg {
+                  width: 27px;
+                  height: 20px;
+                }
               }
             }
           }
         }
-      }
-    }
-  }
-
-}
-
-@media (max-width: 440px) {
-
-  .oralCountingSimulators-hero {
-
-    &__content {
-
-      &-blocks {
 
         &__right {
 
@@ -548,12 +553,38 @@
 
             &__top {
 
+              &-right {
+
+                &__info {
+
+                  & p {
+                    font-size: 40px;
+
+                    &.answer {
+                      width: 120px;
+                      height: 50px;
+                    }
+                  }
+                }
+              }
+
               &-left {
 
                 &__info {
 
                   & div {
-                    justify-content: center;
+
+                    &:nth-child(1) {
+                      justify-content: end;
+                    }
+
+                    & span {
+
+                      & svg {
+                        width: 25px;
+                        height: 25px;
+                      }
+                    }
                   }
                 }
               }
@@ -563,4 +594,5 @@
       }
     }
   }
+
 }
