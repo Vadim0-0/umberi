@@ -814,6 +814,7 @@
         &__block {
 
           & .first {
+            padding: 6px 28px 6px 10px;
             top: 0;
             left: 0;
 
@@ -866,6 +867,7 @@
               &__list {
                 grid-template-columns: repeat(3, 1fr);
                 gap: 1px;
+                row-gap: 6px;
 
                 &-item {
                   width: auto;
@@ -917,6 +919,20 @@
                   font-size: 14px;
                   line-height: 137%;
                   letter-spacing: 0.007em;
+                }
+              }
+            }
+          }
+
+          &-block {
+
+            &__info {
+
+              &-content {
+
+                &__img {
+
+                  width: 90%;
                 }
               }
             }
