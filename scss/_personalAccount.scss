@@ -179,8 +179,7 @@
     &__content {
 
       &-left {
-        flex-direction: column;
-        gap: 20px;
+        gap: 10px;
         padding: 0 12px 0 12px;
 
         &__block {
@@ -189,6 +188,10 @@
 
         &__btns {
           width: 100%;
+
+          &-btn {
+            font-size: 14px;
+          }
         }
       }
 
