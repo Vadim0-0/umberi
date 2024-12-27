@@ -808,14 +808,42 @@
 
       &-left {
         padding: 0;
+        gap: 5px;
 
 
         &__block {
 
+          & .first {
+            top: 0;
+            left: 0;
+
+            & p {
+              font-size: 11px;
+            }
+          }
+
           &-top {
+            margin-bottom: 25px;
 
             & h4 {
               font-size: 14px;
+            }
+          }
+
+          &-info {
+
+            &__list {
+
+              &-item {
+
+                & p {
+                  font-size: 16px;
+
+                  & span {
+                    font-size: 12px;
+                  }
+                }
+              }
             }
           }
 
@@ -837,13 +865,20 @@
 
               &__list {
                 grid-template-columns: repeat(3, 1fr);
+                gap: 1px;
 
                 &-item {
                   width: auto;
+                  height: 60px;
                   padding: 0 5px;
                 }
               }
             }
+          }
+
+          &-btn {
+            position: absolute;
+            bottom: 0;
           }
         }
       }
