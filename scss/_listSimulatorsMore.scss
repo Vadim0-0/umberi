@@ -112,6 +112,15 @@
           width: calc(100% + 2px);
           border-radius: 0 10px 0 0;
           background-color:  #ccbeb0;
+
+          & h4 {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 137%;
+            letter-spacing: 0.01em;
+            text-align: center;
+            color: #4b3e35;
+          }
         }
 
         &-info {
@@ -308,7 +317,7 @@
               & p {
                 font-family: var(--second-family);
                 font-weight: 400;
-                font-size: 12px;
+                font-size: 16px;
                 line-height: 167%;
                 letter-spacing: 0.01em;
                 text-align: justify;
@@ -798,12 +807,43 @@
       padding-top: 130px;
 
       &-left {
-        grid-template-columns: auto;
+        padding: 0;
+
 
         &__block {
 
+          &-top {
+
+            & h4 {
+              font-size: 14px;
+            }
+          }
+
           &:nth-child(1) {
             padding-bottom: 20px;
+
+            & h3 {
+              font-size: 13px;
+            }
+          }
+
+          &-img {
+            width: 90%;
+          }
+
+          &:nth-child(3) {
+
+            & .listSimulatorsMore-hero__content-left__block-info {
+
+              &__list {
+                grid-template-columns: repeat(3, 1fr);
+
+                &-item {
+                  width: auto;
+                  padding: 0 5px;
+                }
+              }
+            }
           }
         }
       }
@@ -832,30 +872,35 @@
             }
           }
 
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 450px) {
-  .listSimulatorsMore-hero {
-
-    &__content {
-
-      &-right {
-
-        &__blocks {
-
           &-block {
 
             &__info {
-              grid-template-columns: auto;
+
+              &-content {
+
+                & .name {
+
+                  & p {
+                    font-size: 11px;
+                  }
+                }
+
+                &__top {
+
+                  & h4 {
+                    font-size: 13px;
+                  }
+                }
+
+                &__img {
+                  width: 90%;
+                }
+              }
             }
           }
+
         }
       }
     }
   }
-
 }
