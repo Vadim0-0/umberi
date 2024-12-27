@@ -4934,6 +4934,7 @@ button {
     gap: 5px;
   }
   .listSimulatorsMore-hero__content-left__block .first {
+    padding: 6px 28px 6px 10px;
     top: 0;
     left: 0;
   }
@@ -4964,6 +4965,7 @@ button {
   .listSimulatorsMore-hero__content-left__block:nth-child(3) .listSimulatorsMore-hero__content-left__block-info__list {
     grid-template-columns: repeat(3, 1fr);
     gap: 1px;
+    row-gap: 6px;
   }
   .listSimulatorsMore-hero__content-left__block:nth-child(3) .listSimulatorsMore-hero__content-left__block-info__list-item {
     width: auto;
@@ -4987,6 +4989,9 @@ button {
     font-size: 14px;
     line-height: 137%;
     letter-spacing: 0.007em;
+  }
+  .listSimulatorsMore-hero__content-right__blocks-block__info-content__img {
+    width: 90%;
   }
 }
 .oralCountingSimulators-hero {
