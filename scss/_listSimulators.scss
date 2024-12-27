@@ -1102,7 +1102,10 @@
             &__block {
 
               & .variety {
-                font-size: 11px;
+
+                & p {
+                  font-size: 11px;
+                }
               }
 
               &-top {
