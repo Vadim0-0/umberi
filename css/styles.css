@@ -6312,16 +6312,23 @@ button {
     gap: 9px;
   }
   .registration-hero__content-block .fields-blocks {
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
     padding-left: 10px;
     padding-right: 10px;
   }
   .registration-hero__content-block .fields-blocks__label {
     width: 100%;
   }
+  .registration-hero__content-block .fields-blocks__label input {
+    padding: 14px 10px;
+  }
   .registration-hero__content-block .fields-blocks__select {
     width: 100%;
+  }
+  .registration-hero__content-block .fields-blocks__select button {
+    padding: 14px 10px;
   }
 }
 .authorization-hero {
@@ -6433,16 +6440,23 @@ button {
     gap: 9px;
   }
   .authorization-hero__content-block .fields-blocks {
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
     padding-left: 10px;
     padding-right: 10px;
   }
   .authorization-hero__content-block .fields-blocks__label {
     width: 100%;
   }
+  .authorization-hero__content-block .fields-blocks__label input {
+    padding: 14px 10px;
+  }
   .authorization-hero__content-block .fields-blocks__select {
     width: 100%;
+  }
+  .authorization-hero__content-block .fields-blocks__select button {
+    padding: 14px 10px;
   }
 }
 .fields {
