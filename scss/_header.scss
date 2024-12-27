@@ -186,14 +186,14 @@
       align-items: center;
       top: -100px;
       left: 0;
-      padding: 10px 0 20px 0;
+      padding: 10px 0 10px 0;
       z-index: 5;
       @include transitionEase;
       opacity: 0;
       visibility: hidden;
 
       &.active {
-        top: 60px;
+        top: 50px;
         opacity: 1;
         visibility: visible;
       }
@@ -216,6 +216,7 @@
               padding: 5px;
               border: none;
               font-size: 14px;
+              line-height: 100%;
             }
           }
         }
@@ -227,6 +228,10 @@
 
       &-link {
         align-items: center;
+
+        & a {
+          padding: 10px 15px;
+        }
       }
     }
 
@@ -245,21 +250,21 @@
         &-logo {
 
           & svg {
-            width: 70px;
-            height: 50px
+            width: 60px;
+            height: 40px
           }
         }
 
         &-btn {
           @include flex-betweenCenter;
           flex-direction: column;
-          width: 40px;
-          height:25px;
+          width: 30px;
+          height:20px;
           @include transitionEase;
 
           & span {
             width: 80%;
-            height: 3px;
+            height: 2px;
             background-color: #000;
             @include transitionEase;
           }
@@ -269,7 +274,7 @@
             & span {
 
               &:nth-child(1) {
-                transform: translateY(13px) rotate(45deg);
+                transform: translateY(9px) rotate(45deg);
               }
 
               &:nth-child(2) {
