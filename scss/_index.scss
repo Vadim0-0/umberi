@@ -207,8 +207,10 @@
               background-color: var(--white);
               color: #5d6c82;
 
-              & svg {
+              & span {
                 min-width: 70px;
+                border-radius: 20px;
+                overflow: hidden;
               }
 
               & p {
@@ -1553,7 +1555,7 @@
     padding-bottom: 65px;
 
     & h2 {
-      top: 228px;
+      top: 270px;
     }
 
     &__content {
@@ -1585,6 +1587,12 @@
 
             &:nth-child(1) {
               margin-bottom: 0;
+            }
+
+            & h4 {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
             }
           }
         }
@@ -2167,10 +2175,6 @@
 
               &-descrs {
                 padding-right: 0;
-
-                & p {
-                  font-size: 14px;
-                }
               }
             }
           }
@@ -2205,6 +2209,16 @@
                     font-size: 16px;
                   }
                 }
+              }
+            }
+          }
+
+          &:nth-child(2) {
+
+            & .index-sixth__content-blocks__block-content__list-item {
+
+              &__block {
+                padding: 0 10px;
               }
             }
           }
@@ -2282,7 +2296,8 @@
       display: flex;
       flex-direction: column;
       padding-left: 12px;
-      top: 267px;
+      top: 310px;
+      line-height: 110%;
     }
 
     &__content {
@@ -2296,6 +2311,13 @@
             padding: 21px 10px 24px 10px;
           }
         }
+      }
+    }
+
+    &__btns {
+
+      & button {
+        font-size: 12px;
       }
     }
   }
@@ -2335,7 +2357,7 @@
   .index-trainer {
 
     & h2 {
-      top: 20%;
+      top: 26%;
     }
   }
 
