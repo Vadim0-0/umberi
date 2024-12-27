@@ -153,17 +153,24 @@
           gap: 9px;
 
           &-blocks {
-            flex-direction: column;
-            align-items: flex-start;
+            @include grid-ColumnsEqually(2, 5px);
             padding-left: 10px;
             padding-right: 10px;
 
             &__label {
               width: 100%;
+
+              & input {
+                padding: 14px 10px;
+              }
             }
 
             &__select {
               width: 100%;
+
+              & button {
+                padding: 14px 10px;
+              }
             }
           }
         }
