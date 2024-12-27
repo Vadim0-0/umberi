@@ -1101,6 +1101,18 @@
 
             &__block {
 
+              & .variety {
+                font-size: 11px;
+              }
+
+              &-top {
+                padding: 5px 10px;
+
+                & h3 {
+                  font-size: 13px;
+                }
+              }
+
               &-info {
 
                 &__content {
