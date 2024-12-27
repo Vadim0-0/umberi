@@ -1432,6 +1432,15 @@
 
         &__block {
 
+          &-content {
+            min-height: 200px;
+
+            &__top {
+
+              min-height: 82px;
+            }
+          }
+
           &:nth-child(1) {
             padding-left: 12px;
 
