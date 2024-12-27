@@ -344,19 +344,19 @@
 @media (max-width: 500px) {
 
   .oralCountingSimulatorsResult-hero {
-    padding: 61px 0 70px 0;
+    padding: 61px 0 120px 0;
 
     &__content {
-      padding-top: 170px;
+      padding-top: 20px;
       padding-bottom: 160px;
 
       &-left {
 
         &__blocks {
-          margin-top: -157px;
 
           &-block {
-            width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
           }
         }
       }
@@ -365,11 +365,45 @@
 
         &__top {
           justify-content: center;
-          width: 100%;
+
+          & h3 {
+            font-size: 16px;
+          }
+
         }
 
         &__blocks {
-          grid-template-columns: auto
+
+          &-block {
+
+            & p {
+              font-size: 40px;
+
+              & span {
+                top: 10px;
+                right: -34px;
+                font-weight: 100;
+                font-size: 17px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 435px) {
+
+  .oralCountingSimulatorsResult-hero {
+
+    &__content {
+
+      &-right {
+
+        &__top {
+          min-height: 155px;
         }
       }
     }
