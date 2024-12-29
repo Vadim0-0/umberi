@@ -2934,40 +2934,63 @@ button {
 }
 .trainingIndicators-exercise__content-block__bottom-block__top-select {
   position: relative;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 10px;
   padding-right: 3px;
   margin-bottom: 8px;
 }
-.trainingIndicators-exercise__content-block__bottom-block__top-select select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  appearance: none;
+.trainingIndicators-exercise__content-block__bottom-block__top-select.active button svg {
+  transform: rotate(180deg);
+}
+.trainingIndicators-exercise__content-block__bottom-block__top-select.active .select-list {
+  top: 107%;
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+}
+.trainingIndicators-exercise__content-block__bottom-block__top-select button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+  gap: 10px;
+  width: 100%;
+}
+.trainingIndicators-exercise__content-block__bottom-block__top-select button svg {
+  transition: all 0.3s ease-in-out;
+}
+.trainingIndicators-exercise__content-block__bottom-block__top-select button p {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 157%;
+  font-size: 12px;
+  line-height: 150%;
   letter-spacing: 0.01em;
   text-align: center;
   color: #615f5f;
 }
-.trainingIndicators-exercise__content-block__bottom-block__top-select select::-moz-placeholder {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 157%;
-  letter-spacing: 0.01em;
-  text-align: center;
-  color: #615f5f;
+.trainingIndicators-exercise__content-block__bottom-block__top-select .select-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 168px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
-.trainingIndicators-exercise__content-block__bottom-block__top-select select::placeholder {
+.trainingIndicators-exercise__content-block__bottom-block__top-select .select-list__item p {
+  padding: 10px 5px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 157%;
+  font-size: 12px;
+  line-height: 150%;
   letter-spacing: 0.01em;
   text-align: center;
   color: #615f5f;
+  cursor: pointer;
 }
 .trainingIndicators-exercise__content-block__bottom-block__top h4 {
   margin-bottom: 10px;
@@ -3508,6 +3531,59 @@ button {
   }
   .trainingIndicators-exercise .container {
     padding: 0 12px;
+  }
+  .trainingIndicators-exercise__content-block__top {
+    padding-bottom: 20px;
+  }
+  .trainingIndicators-exercise__content-block__bottom {
+    grid-template-columns: 15% 1fr 1fr;
+    gap: 6px;
+    min-width: 171%;
+  }
+  .trainingIndicators-exercise__content-block__bottom-block__top-select button p {
+    text-align: start;
+    font-size: 11px;
+  }
+  .trainingIndicators-exercise__content-block__bottom-block__top-select .select-list__item p {
+    font-size: 11px;
+  }
+}
+@media (max-width: 450px) {
+  .trainingIndicators-hero__content-blocks__block-content {
+    min-height: 170px;
+  }
+  .trainingIndicators-hero__content-blocks__block-content__top {
+    min-height: 60px;
+  }
+  .trainingIndicators-hero__content-blocks__block-content__top-info h3 {
+    font-size: 12px;
+  }
+  .trainingIndicators-hero__content-blocks__block-content__top-info p {
+    font-size: 10px;
+  }
+  .trainingIndicators-hero__content-blocks__block-content__bottom-line p {
+    font-size: 10px;
+  }
+  .trainingIndicators-hero__content-blocks__block:nth-child(1) .trainingIndicators-hero__content-blocks__block-content__info p {
+    font-size: 24px;
+  }
+  .trainingIndicators-hero__content-blocks__block:nth-child(1) .trainingIndicators-hero__content-blocks__block-content__info p span {
+    font-size: 18px;
+  }
+  .trainingIndicators-hero__content-blocks__block:nth-child(2) .trainingIndicators-hero__content-blocks__block-content__info p {
+    font-size: 22px;
+  }
+  .trainingIndicators-hero__content-blocks__block:nth-child(3) .trainingIndicators-hero__content-blocks__block-content__info p {
+    font-size: 22px;
+  }
+  .trainingIndicators-hero__content-blocks__block:nth-child(4) .trainingIndicators-hero__content-blocks__block-content__info p {
+    font-size: 22px;
+  }
+  .trainingIndicators-exercise__content-block__top-info__right .subject p {
+    font-size: 11px;
+  }
+  .trainingIndicators-exercise__content-block__top-info__right h3 {
+    font-size: 11px;
   }
 }
 .listSimulators-hero {
@@ -4674,8 +4750,8 @@ button {
 }
 .listSimulatorsMore-hero__content-right__blocks-block__info-content .name {
   position: absolute;
-  top: -1px;
-  left: -1px;
+  top: 0;
+  left: 0;
   padding: 6px 20px;
   border-radius: 0 10px 10px 0;
   background-color: #4b3e35;
