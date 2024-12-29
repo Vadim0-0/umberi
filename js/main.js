@@ -26,6 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const headerContent = document.querySelector('.header__content');
   const burgerButton = document.getElementById('header-burger-open');
 
+  if (!headerContent || !burgerButton) {
+    return;
+  }
+
   if (headerContent && burgerButton) {
       const toggleActiveClass = () => {
           if (window.innerWidth < 768) {
@@ -50,6 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener("DOMContentLoaded", () => {
   // Найти все блоки с классом "trainingIndicators-exercise__content-block"
   const contentBlocks = document.querySelectorAll(".trainingIndicators-exercise__content-block");
+
+  if (!contentBlocks) {
+    return;
+  }
 
   contentBlocks.forEach(block => {
     const topBlock = block.querySelector(".trainingIndicators-exercise__content-block__top");
@@ -83,6 +91,10 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const productLists = document.querySelectorAll('.trainingIndicators-exercise__content-block__container'); // Находим все элементы с этим классом
   const maxScrollStep = 40; // Максимальная длина шага прокрутки
+
+  if (!productLists) {
+    return;
+  }
 
   // Функция плавного скроллинга для одного элемента
   function startSmoothScroll(container, targetScrollPosition) {
@@ -165,10 +177,18 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const sortingContainers = document.querySelectorAll(".listSimulators-hero__content-right__blocks-top__block");
 
+  if (!sortingContainers) {
+    return;
+  }
+
   sortingContainers.forEach(container => {
     const sortingBtn = container.querySelector(".list-open");
     const sortingList = container.querySelector(".block-list");
     const sortingItems = container.querySelectorAll(".block-list__item");
+
+    if (!sortingBtn || !sortingList || !sortingItems) {
+      return;
+    }
 
     // Открытие/закрытие списка при клике на кнопку
     sortingBtn.addEventListener("click", (event) => {
@@ -224,6 +244,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const sortingContainers = document.querySelectorAll(".listSimulatorsMore-hero__content-right__blocks-top__block");
+
+  if (!sortingContainers) {
+    return;
+  }
 
   sortingContainers.forEach(container => {
     const sortingBtn = container.querySelector(".list-open");
@@ -342,6 +366,10 @@ document.querySelectorAll('.oralCountingSimulators-hero__content-blocks__right-c
   // Находим все кнопки внутри текущего контейнера
   const buttons = container.querySelectorAll('.btn-global.choice');
 
+  if (!buttons) {
+    return;
+  }
+
   buttons.forEach(button => {
       button.addEventListener('click', () => {
           // Убираем класс active у всех кнопок
@@ -364,6 +392,10 @@ document.querySelectorAll('.oralCountingSimulators-hero__content-blocks__right-c
 document.addEventListener('DOMContentLoaded', () => {
   // Получаем все обертки для селектов
   const selectWrappers = document.querySelectorAll('.fields-blocks__select');
+
+  if (!selectWrappers) {
+    return;
+  }
 
   // Функция для инициализации одного селекта
   const initSelect = (selectWrapper) => {
@@ -416,6 +448,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const passwordInput = document.getElementById('registrationPassword');
   const toggleButton = document.getElementById('togglePassword');
 
+  if (!passwordInput || !toggleButton) {
+    return;
+  }
+
   toggleButton.addEventListener('click', () => {
     // Toggle the type attribute
     const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
@@ -426,6 +462,10 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const passwordInput = document.getElementById('authorizationPassword');
   const toggleButton = document.getElementById('togglePassword');
+
+  if (!passwordInput || !toggleButton) {
+    return;
+  }
 
   toggleButton.addEventListener('click', () => {
     // Toggle the type attribute
