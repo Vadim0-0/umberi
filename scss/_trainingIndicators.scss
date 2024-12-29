@@ -440,32 +440,79 @@
 
             &-select {
               position: relative;
-              display: flex;
-              justify-content: end;
-              align-items: center;
-              gap: 10px;
               padding-right: 3px;
               margin-bottom: 8px;
 
-              & select {
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                -o-appearance: none;
-                appearance: none;
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 157%;
-                letter-spacing: 0.01em;
-                text-align: center;
-                color: #615f5f;
+              &.active {
 
-                &::placeholder {
+                & button {
+
+                  & svg {
+                    transform: rotate(180deg);
+                  }
+                }
+
+
+                & .select-list {
+                  top: 107%;
+                  opacity: 1;
+                  pointer-events: all;
+                  visibility: visible;
+                }
+              }
+
+              & button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 5px;
+                gap: 10px;
+                width: 100%;
+
+                & svg {
+                  @include transitionEaseInOut;
+                }
+
+                & p {
                   font-weight: 400;
-                  font-size: 14px;
-                  line-height: 157%;
+                  font-size: 12px;
+                  line-height: 150%;
                   letter-spacing: 0.01em;
                   text-align: center;
                   color: #615f5f;
+                }
+              }
+
+              & .select-list {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                max-height: 168px;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+                background-color: #fff;
+                box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+                border-radius: 20px;
+                @include transitionEaseInOut;
+
+                opacity: 0;
+                pointer-events: none;
+                visibility: hidden;
+
+                &__item {
+
+                  & p {
+                    padding: 10px 5px;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 150%;
+                    letter-spacing: 0.01em;
+                    text-align: center;
+                    color: #615f5f;
+                    cursor: pointer;
+                  }
                 }
               }
             }
@@ -1485,6 +1532,166 @@
 
     & .container {
       padding: 0 12px;
+    }
+
+    &__content {
+
+      &-block {
+
+        &__top {
+          padding-bottom: 20px;
+        }
+
+        &__bottom {
+          grid-template-columns: 15% 1fr 1fr;
+          gap: 6px;
+          min-width: 171%;
+
+          &-block {
+
+            &__top {
+
+              &-select {
+
+                & button {
+
+                  & p {
+                    text-align: start;
+                    font-size: 11px;
+                  }
+                }
+
+                & .select-list {
+
+                  &__item {
+
+                    & p {
+                      font-size: 11px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+
+  .trainingIndicators-hero {
+
+    &__content {
+
+      &-blocks {
+
+        &__block {
+
+          &-content {
+            min-height: 170px;
+
+            &__top {
+              min-height: 60px;
+
+              &-info {
+
+                & h3 {
+                  font-size: 12px;
+                }
+
+                & p {
+                  font-size: 10px;
+                }
+              }
+            }
+
+            &__bottom {
+
+              &-line {
+
+                & p {
+
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+
+          &:nth-child(1) {
+
+            & .trainingIndicators-hero__content-blocks__block-content__info  {
+
+              & p {
+                font-size: 24px;
+
+                & span {
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+
+          &:nth-child(2) {
+
+            & .trainingIndicators-hero__content-blocks__block-content__info {
+
+              & p {
+                font-size: 22px;
+              }
+            }
+          }
+
+          &:nth-child(3) {
+            & .trainingIndicators-hero__content-blocks__block-content__info {
+
+              & p {
+                font-size: 22px;
+              }
+            }
+          }
+
+          &:nth-child(4) {
+
+            & .trainingIndicators-hero__content-blocks__block-content__info {
+
+              & p {
+                font-size: 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .trainingIndicators-exercise {
+
+    &__content {
+
+      &-block {
+
+        &__top {
+
+          &-info {
+
+            &__right {
+
+              & .subject {
+
+                & p {
+                  font-size: 11px;
+                }
+              }
+
+              & h3 {
+                font-size: 11px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
