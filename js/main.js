@@ -282,6 +282,61 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Проверить наличие нужных элементов на странице
+  if (!document.querySelector(".trainingIndicators-exercise__content-block__bottom-block__top-select")) {
+      return;
+  }
+
+  // Функция для управления активным состоянием
+  function toggleActive(button) {
+      const parent = button.closest(".trainingIndicators-exercise__content-block__bottom-block__top-select");
+      if (parent.classList.contains("active")) {
+          parent.classList.remove("active");
+      } else {
+          document.querySelectorAll(".trainingIndicators-exercise__content-block__bottom-block__top-select.active").forEach(activeBlock => {
+              activeBlock.classList.remove("active");
+          });
+          parent.classList.add("active");
+      }
+  }
+
+  // Функция для обновления текста кнопки и удаления класса active
+  function updateButtonText(item, button) {
+      const parent = button.closest(".trainingIndicators-exercise__content-block__bottom-block__top-select");
+      button.querySelector("p").textContent = item.textContent.trim();
+      parent.classList.remove("active");
+  }
+
+  // Обработчик кликов по документу
+  document.addEventListener("click", (event) => {
+      const button = event.target.closest(".list-open");
+      const listItem = event.target.closest(".select-list__item");
+
+      // Если клик на кнопке - переключить активный класс
+      if (button) {
+          event.stopPropagation();
+          toggleActive(button);
+          return;
+      }
+
+      // Если клик на элементе списка - обновить текст кнопки
+      if (listItem) {
+          const parentBlock = listItem.closest(".trainingIndicators-exercise__content-block__bottom-block__top-select");
+          const parentButton = parentBlock.querySelector(".list-open");
+          updateButtonText(listItem, parentButton);
+      }
+
+      // Закрыть все открытые блоки, если клик вне их
+      document.querySelectorAll(".trainingIndicators-exercise__content-block__bottom-block__top-select.active").forEach(activeBlock => {
+          if (!activeBlock.contains(event.target)) {
+              activeBlock.classList.remove("active");
+          }
+      });
+  });
+});
+
+
 
 document.querySelectorAll('.oralCountingSimulators-hero__content-blocks__right-content__btns').forEach(container => {
   // Находим все кнопки внутри текущего контейнера
